@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mygoalskotlin.UI.Login.Model.LoginModel
 import com.example.mygoalskotlin.UI.Main.MainActivity
-import com.example.mygoalskotlin.Register.View.RegisterActivity
+import com.example.mygoalskotlin.UI.Register.View.RegisterActivity
 import com.example.mygoalskotlin.Utils.MessagesConstants
 import com.example.mygoalskotlin.Utils.Validator
 import com.example.mygoalskotlin.databinding.ActivityLoginBinding

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
 MERGED from [androidx.databinding:databinding-adapters:7.1.2] C:\Users\Hthen\.gradle\caches\transforms-3\58eeb7965aa57c4abd0475d7920a6f5f\transformed\databinding-adapters-7.1.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-ktx:7.1.2] C:\Users\Hthen\.gradle\caches\transforms-3\ca4b1ff276590c5ea1110a33855cda3a\transformed\databinding-ktx-7.1.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:7.1.2] C:\Users\Hthen\.gradle\caches\transforms-3\46ad640bc4eb8234bb01042af4d00fc2\transformed\databinding-runtime-7.1.2\AndroidManifest.xml:17:1-24:12
@@ -86,25 +86,25 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Hthen\.gradle\ca
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Hthen\.gradle\caches\transforms-3\f67c0bd9ed65b2d96e81338470b5ba01\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Hthen\.gradle\caches\transforms-3\6a70772dffd1dfed1ba2c3800e1880e2\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Hthen\.gradle\caches\transforms-3\3cbd55e26b3111309ccc2290138c38a9\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
 	package
 		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
 		INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
 		INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:5:5-24:19
+ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:5:5-26:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:19.0.0] C:\Users\Hthen\.gradle\caches\transforms-3\ef1ee254506a733ee83d4147a86e4d38\transformed\firebase-analytics-ktx-19.0.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:19.0.0] C:\Users\Hthen\.gradle\caches\transforms-3\ef1ee254506a733ee83d4147a86e4d38\transformed\firebase-analytics-ktx-19.0.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\Hthen\.gradle\caches\transforms-3\e77b7c7708e41bd61e334d2eafe02792\transformed\firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
@@ -173,34 +173,38 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Ht
 		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:11:9-51
-activity#com.example.mygoalskotlin.Register.View.RegisterActivity
-ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:12:9-68
-	android:name
-		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:12:19-65
-activity#com.example.mygoalskotlin.Login.View.LoginActivity
-ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:13:9-62
-	android:name
-		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:13:19-59
-activity#com.example.mygoalskotlin.Splash.SplashActivity
-ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:14:9-22:20
+activity#com.example.mygoalskotlin.UI.Register.View.RegisterActivity
+ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:12:9-13:68
 	android:theme
-		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:16:13-63
+		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:13:13-66
 	android:name
-		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:15:13-50
+		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:12:19-93
+activity#com.example.mygoalskotlin.UI.Login.View.LoginActivity
+ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:14:9-15:68
+	android:theme
+		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:15:13-66
+	android:name
+		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:14:19-87
+activity#com.example.mygoalskotlin.UI.Splash.SplashActivity
+ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:16:9-24:20
+	android:theme
+		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:18:13-72
+	android:name
+		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:17:13-78
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:17:13-21:29
+ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:20:27-74
-activity#com.example.mygoalskotlin.Main.MainActivity
-ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:23:9-55
+		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:22:27-74
+activity#com.example.mygoalskotlin.UI.Main.MainActivity
+ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:25:9-83
 	android:name
-		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:23:19-52
+		ADDED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:25:19-80
 uses-sdk
 INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml

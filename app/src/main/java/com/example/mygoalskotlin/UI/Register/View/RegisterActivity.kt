@@ -1,14 +1,16 @@
-package com.example.mygoalskotlin.Register.View
+package com.example.mygoalskotlin.UI.Register.View
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mygoalskotlin.UI.Register.Model.RegisterModel
 import com.example.mygoalskotlin.Utils.Validator
 import com.example.mygoalskotlin.databinding.ActivityRegisterBinding
 import com.example.mygoalskotlin.Model.RegisterModel
+import com.example.mygoalskotlin.Utils.MessagesConstants.INVALID_EMAIL
+import com.example.mygoalskotlin.Utils.MessagesConstants.INVALID_PASSWORD
+import com.example.mygoalskotlin.Utils.MessagesConstants.NO_MATCH_PASSWORD
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 

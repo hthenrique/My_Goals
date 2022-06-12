@@ -6824,7 +6824,31 @@
         
         <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimaryVariant</item>
         
+    </style><style name="Theme.MyGoalsKotlinNoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/primaryLightColor</item>
+        
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnSecondary">@color/secondaryLightColor</item>
+        
+        <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimaryVariant</item>
+        
     </style></file><file path="C:\Users\Hthen\StudioProjects\my-goals\app\src\main\res\values-night\themes.xml" qualifiers="night-v8"><style name="Theme.MyGoalsKotlin" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/primaryLightColor</item>
+        
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnSecondary">@color/secondaryLightColor</item>
+        
+        <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimaryVariant</item>
+        
+    </style><style name="Theme.MyGoalsKotlinNoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryVariant">@color/primaryDarkColor</item>

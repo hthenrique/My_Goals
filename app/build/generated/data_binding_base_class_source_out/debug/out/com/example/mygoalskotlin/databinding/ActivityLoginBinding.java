@@ -30,31 +30,36 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final Button buttonRegister;
 
   @NonNull
+  public final ConstraintLayout constraintLayout3;
+
+  @NonNull
   public final EditText editTextEmail;
 
   @NonNull
   public final EditText editTextPassword;
 
   @NonNull
-  public final ProgressBar loginProgressBar;
+  public final ImageView imageView2;
 
   @NonNull
-  public final ImageView logo;
+  public final ProgressBar loginProgressBar;
 
   @NonNull
   public final TextView textView2;
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonLogin,
-      @NonNull Button buttonRegister, @NonNull EditText editTextEmail,
-      @NonNull EditText editTextPassword, @NonNull ProgressBar loginProgressBar,
-      @NonNull ImageView logo, @NonNull TextView textView2) {
+      @NonNull Button buttonRegister, @NonNull ConstraintLayout constraintLayout3,
+      @NonNull EditText editTextEmail, @NonNull EditText editTextPassword,
+      @NonNull ImageView imageView2, @NonNull ProgressBar loginProgressBar,
+      @NonNull TextView textView2) {
     this.rootView = rootView;
     this.buttonLogin = buttonLogin;
     this.buttonRegister = buttonRegister;
+    this.constraintLayout3 = constraintLayout3;
     this.editTextEmail = editTextEmail;
     this.editTextPassword = editTextPassword;
+    this.imageView2 = imageView2;
     this.loginProgressBar = loginProgressBar;
-    this.logo = logo;
     this.textView2 = textView2;
   }
 
@@ -97,6 +102,12 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.constraintLayout3;
+      ConstraintLayout constraintLayout3 = ViewBindings.findChildViewById(rootView, id);
+      if (constraintLayout3 == null) {
+        break missingId;
+      }
+
       id = R.id.editTextEmail;
       EditText editTextEmail = ViewBindings.findChildViewById(rootView, id);
       if (editTextEmail == null) {
@@ -109,15 +120,15 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.loginProgressBar;
-      ProgressBar loginProgressBar = ViewBindings.findChildViewById(rootView, id);
-      if (loginProgressBar == null) {
+      id = R.id.imageView2;
+      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView2 == null) {
         break missingId;
       }
 
-      id = R.id.logo;
-      ImageView logo = ViewBindings.findChildViewById(rootView, id);
-      if (logo == null) {
+      id = R.id.loginProgressBar;
+      ProgressBar loginProgressBar = ViewBindings.findChildViewById(rootView, id);
+      if (loginProgressBar == null) {
         break missingId;
       }
 
@@ -128,7 +139,8 @@ public final class ActivityLoginBinding implements ViewBinding {
       }
 
       return new ActivityLoginBinding((ConstraintLayout) rootView, buttonLogin, buttonRegister,
-          editTextEmail, editTextPassword, loginProgressBar, logo, textView2);
+          constraintLayout3, editTextEmail, editTextPassword, imageView2, loginProgressBar,
+          textView2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

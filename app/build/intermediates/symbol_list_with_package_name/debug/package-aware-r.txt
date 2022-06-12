@@ -1932,6 +1932,8 @@ id clockwise
 id collapseActionView
 id confirm_button
 id constraintLayout
+id constraintLayout2
+id constraintLayout3
 id container
 id content
 id contentPanel
@@ -2028,6 +2030,7 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView2
 id info
 id invisible
 id inward
@@ -2053,7 +2056,6 @@ id linearLayout5
 id listMode
 id list_item
 id loginProgressBar
-id logo
 id logoutUser
 id masked
 id matchesValue
@@ -3093,6 +3095,7 @@ style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
 style Theme_MyGoalsKotlin
+style Theme_MyGoalsKotlinNoActionBar
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

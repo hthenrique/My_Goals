@@ -5,7 +5,7 @@ import android.view.View
 import androidx.lifecycle.ViewModel
 import com.example.mygoalskotlin.Firebase.AuthListener
 import com.example.mygoalskotlin.UI.Login.View.LoginActivity
-import com.example.mygoalskotlin.UI.Register.Model.RegisterModel
+import com.example.mygoalskotlin.Model.RegisterModel
 import io.reactivex.disposables.CompositeDisposable
 
 class RegisterViewModel(): ViewModel() {

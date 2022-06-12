@@ -25,12 +25,6 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyGoalsKotlin" >
         <activity
-            android:name="com.example.mygoalskotlin.UI.Register.View.RegisterActivity"
-            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
-        <activity
-            android:name="com.example.mygoalskotlin.UI.Login.View.LoginActivity"
-            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
-        <activity
             android:name="com.example.mygoalskotlin.UI.Splash.SplashActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
             <intent-filter>
@@ -39,6 +33,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.mygoalskotlin.UI.Register.View.RegisterActivity"
+            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
+        <activity
+            android:name="com.example.mygoalskotlin.UI.Login.View.LoginActivity"
+            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
         <activity android:name="com.example.mygoalskotlin.UI.Main.MainActivity" />
 
         <service

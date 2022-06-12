@@ -45,34 +45,34 @@
 26        android:theme="@style/Theme.MyGoalsKotlin" >
 26-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:11:9-51
 27        <activity
-27-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:12:9-13:68
-28            android:name="com.example.mygoalskotlin.UI.Register.View.RegisterActivity"
-28-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:12:19-93
-29            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
-29-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:13:13-66
-30        <activity
-30-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:14:9-15:68
-31            android:name="com.example.mygoalskotlin.UI.Login.View.LoginActivity"
-31-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:14:19-87
-32            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
-32-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:15:13-66
-33        <activity
-33-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:16:9-24:20
-34            android:name="com.example.mygoalskotlin.UI.Splash.SplashActivity"
-34-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:17:13-78
-35            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
-35-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:18:13-72
-36            <intent-filter>
-36-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:19:13-23:29
-37                <action android:name="android.intent.action.MAIN" />
-37-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:20:17-69
-37-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:20:25-66
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-39-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:22:17-77
-39-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:22:27-74
-40            </intent-filter>
-41        </activity>
+27-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:12:9-20:20
+28            android:name="com.example.mygoalskotlin.UI.Splash.SplashActivity"
+28-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:13:13-78
+29            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
+29-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:14:13-72
+30            <intent-filter>
+30-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:15:13-19:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:16:17-69
+31-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:16:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:18:17-77
+33-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:18:27-74
+34            </intent-filter>
+35        </activity>
+36        <activity
+36-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:21:9-22:68
+37            android:name="com.example.mygoalskotlin.UI.Register.View.RegisterActivity"
+37-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:21:19-93
+38            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
+38-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:22:13-66
+39        <activity
+39-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:23:9-24:68
+40            android:name="com.example.mygoalskotlin.UI.Login.View.LoginActivity"
+40-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:23:19-87
+41            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
+41-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:24:13-66
 42        <activity android:name="com.example.mygoalskotlin.UI.Main.MainActivity" />
 42-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:25:9-83
 42-->C:\Users\Hthen\StudioProjects\my-goals\app\src\main\AndroidManifest.xml:25:19-80

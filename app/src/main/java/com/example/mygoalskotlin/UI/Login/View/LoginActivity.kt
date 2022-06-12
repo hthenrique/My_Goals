@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mygoalskotlin.UI.Login.Model.LoginModel
+import com.example.mygoalskotlin.Model.LoginModel
 import com.example.mygoalskotlin.UI.Main.MainActivity
 import com.example.mygoalskotlin.UI.Register.View.RegisterActivity
 import com.example.mygoalskotlin.Utils.MessagesConstants
@@ -47,7 +47,8 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setupButtonClicked() {
         binding.buttonLogin.setOnClickListener {
-
+            binding.loginProgressBar.visibility = View.VISIBLE
+            binding.buttonLogin.isClickable = false
             loginModel.email = binding.editTextEmail.text.toString().trim()
             loginModel.password = binding.editTextPassword.text.toString().trim()
 
@@ -65,13 +66,14 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun firebaseRequest(){
-        firebaseAuth.signInWithEmailAndPassword(loginModel.email, loginModel.password)
+        firebaseAuth.signInWithEmailAndPassword(loginModel.email.toString(), loginModel.password.toString())
             .addOnCompleteListener {
                 if (it.isSuccessful){
                     loginUser()
                     saveUserInSharedPrefs()
                 }else{
                     binding.loginProgressBar.visibility = View.GONE
+                    binding.buttonLogin.isClickable = true
                     Toast.makeText(this,MessagesConstants.NON_EXISTENT_USER,Toast.LENGTH_LONG).show()
                     registerUser()
                 }

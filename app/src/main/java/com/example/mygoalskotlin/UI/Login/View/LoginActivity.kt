@@ -47,12 +47,13 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setupButtonClicked() {
         binding.buttonLogin.setOnClickListener {
-            binding.loginProgressBar.visibility = View.VISIBLE
-            binding.buttonLogin.isClickable = false
+
             loginModel.email = binding.editTextEmail.text.toString().trim()
             loginModel.password = binding.editTextPassword.text.toString().trim()
 
             if (validateUserToLogin()){
+                binding.loginProgressBar.visibility = View.VISIBLE
+                binding.buttonLogin.isEnabled = false
                 firebaseRequest()
             }else{
                 Toast.makeText(this, MessagesConstants.INVALID_PARAMETERS, Toast.LENGTH_LONG).show()
@@ -73,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
                     saveUserInSharedPrefs()
                 }else{
                     binding.loginProgressBar.visibility = View.GONE
-                    binding.buttonLogin.isClickable = true
+                    binding.buttonLogin.isEnabled = true
                     Toast.makeText(this,MessagesConstants.NON_EXISTENT_USER,Toast.LENGTH_LONG).show()
                     registerUser()
                 }

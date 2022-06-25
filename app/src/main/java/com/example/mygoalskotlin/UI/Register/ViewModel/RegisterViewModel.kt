@@ -1,40 +1,41 @@
 package com.example.mygoalskotlin.UI.Register.ViewModel
 
+import android.app.Application
 import android.content.Intent
 import android.view.View
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mygoalskotlin.Firebase.AuthListener
 import com.example.mygoalskotlin.UI.Login.View.LoginActivity
 import com.example.mygoalskotlin.Model.RegisterModel
+import com.example.mygoalskotlin.Model.repository.Repository
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import io.reactivex.disposables.CompositeDisposable
 
-class RegisterViewModel(): ViewModel() {
+class RegisterViewModel: AndroidViewModel {
 
-    private var email:String? = null
-    private var password:String? = null
+    private var repository: Repository? = null
+    private var mutableLiveData: MutableLiveData<FirebaseUser>? = null
+    private var errorMutableLiveData: MutableLiveData<String>? = null
 
-    private val registerModel: RegisterModel
-
-    init {
-        this.registerModel = RegisterModel()
+    constructor(application: Application) : super(application){
+        repository = Repository(application)
+        mutableLiveData = repository!!.getMutableLiveData()
+        errorMutableLiveData = repository!!.getErrorMutableLiveData()
     }
-    var authListener: AuthListener? = null
-    private val disposables = CompositeDisposable()
+
 
     fun signup(registerModel: RegisterModel){
-        registerModel.email = email.toString()
-        registerModel.password = password.toString()
-        if (email.isNullOrEmpty() || password.isNullOrEmpty()){
-            authListener?.onFailure("Invalid email or password")
-            return
-        }
-        authListener?.onStarted()
-
+        repository?.registerNewUser(registerModel)
     }
 
-    fun goToLogin(view: View){
-        Intent(view.context, LoginActivity::class.java).also {
-            view.context.startActivity(it)
-        }
+    fun getMutableLiveData(): MutableLiveData<FirebaseUser>? {
+        return mutableLiveData
+    }
+
+    fun getErrorLiveData(): MutableLiveData<String>?{
+        return errorMutableLiveData
     }
 }

@@ -8,16 +8,15 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.mygoalskotlin.Model.LoginModel
-import com.example.mygoalskotlin.UI.Main.MainActivity
+import com.example.mygoalskotlin.UI.Login.ViewModel.LoginViewModel
+import com.example.mygoalskotlin.UI.Main.View.MainActivity
 import com.example.mygoalskotlin.UI.Register.View.RegisterActivity
 import com.example.mygoalskotlin.Utils.MessagesConstants
 import com.example.mygoalskotlin.Utils.Validator
 import com.example.mygoalskotlin.databinding.ActivityLoginBinding
-import com.google.firebase.FirebaseApp
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
 
@@ -28,13 +27,13 @@ class LoginActivity : AppCompatActivity() {
 
     private val loginModel: LoginModel by lazy { LoginModel() }
     private val validator: Validator by lazy { Validator() }
-    private lateinit var firebaseAuth: FirebaseAuth
+    private var loginViewModel: LoginViewModel? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        FirebaseApp.initializeApp(this)
-        firebaseAuth = Firebase.auth
+
+        loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -67,18 +66,23 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun firebaseRequest(){
-        firebaseAuth.signInWithEmailAndPassword(loginModel.email.toString(), loginModel.password.toString())
-            .addOnCompleteListener {
-                if (it.isSuccessful){
-                    loginUser()
-                    saveUserInSharedPrefs()
-                }else{
-                    binding.loginProgressBar.visibility = View.GONE
-                    binding.buttonLogin.isEnabled = true
-                    Toast.makeText(this,MessagesConstants.NON_EXISTENT_USER,Toast.LENGTH_LONG).show()
-                    registerUser()
-                }
+
+        loginViewModel?.login(loginModel)
+        loginViewModel?.getLoginMutableLiveData()?.observe(this, Observer {
+            if (it != null){
+                loginUser()
+                saveUserInSharedPrefs()
             }
+        })
+        loginViewModel?.getErrorLiveData()?.observe(this, Observer {
+            if (it != null){
+                binding.loginProgressBar.visibility = View.GONE
+                binding.buttonLogin.isEnabled = true
+                Toast.makeText(this, it.toString(), Toast.LENGTH_LONG).show()
+                registerUser()
+            }
+        })
+
     }
 
     @SuppressLint("CommitPrefEdits")

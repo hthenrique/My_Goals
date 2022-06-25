@@ -1,4 +1,4 @@
-package com.example.mygoalskotlin.UI.Splash
+package com.example.mygoalskotlin.UI.Splash.View
 
 import android.content.Context
 import android.content.Intent
@@ -6,27 +6,27 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import com.example.mygoalskotlin.UI.Login.View.LoginActivity
-import com.example.mygoalskotlin.UI.Main.MainActivity
+import com.example.mygoalskotlin.UI.Main.View.MainActivity
 import com.example.mygoalskotlin.R
-import com.example.mygoalskotlin.Model.User
-import com.google.firebase.auth.FirebaseAuth
 
 class SplashActivity : AppCompatActivity() {
-    private var user: User = User()
-    private var firebaseAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        Log.i("Splash Screen", "Starting splash screen")
 
         val sharedPreferences: SharedPreferences = getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
         sharedPreferences.getBoolean("isUserLogin", false)
 
         Handler().postDelayed({
             if (!sharedPreferences.contains("isUserLogin")) {
+                Log.i("Splash Screen", "Starting login screen")
                 startLoginActivity()
             } else {
+                Log.i("Splash Screen", "Starting main screen")
                 startMainActivity()
             }
         }, 3000)
@@ -39,7 +39,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun startMainActivity() {
-        val startMain: Intent = Intent(this, MainActivity::class.java)
+        val startMain = Intent(this, MainActivity::class.java)
         startActivity(startMain)
         finish()
     }

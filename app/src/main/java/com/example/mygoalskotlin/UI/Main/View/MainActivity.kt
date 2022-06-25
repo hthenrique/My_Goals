@@ -1,51 +1,48 @@
-package com.example.mygoalskotlin.UI.Main
+package com.example.mygoalskotlin.UI.Main.View
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
-import com.example.mygoalskotlin.Firebase.UserFirebase
-import com.example.mygoalskotlin.UI.Login.View.LoginActivity
-import com.example.mygoalskotlin.R
-import com.example.mygoalskotlin.databinding.ActivityMainBinding
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.mygoalskotlin.Model.User
-import com.google.firebase.FirebaseApp
-import com.google.firebase.auth.FirebaseAuth
+import com.example.mygoalskotlin.R
+import com.example.mygoalskotlin.UI.Login.View.LoginActivity
+import com.example.mygoalskotlin.UI.Main.ViewModel.MainViewModel
+import com.example.mygoalskotlin.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private var firebaseAuth: FirebaseAuth? = FirebaseAuth.getInstance()
-    private val userFirebase: UserFirebase by lazy { UserFirebase() }
-    private val user: User by lazy { User() }
-    private val currentUser = getLoggedUser()
+    private lateinit var mainViewModel: MainViewModel
+    private var currentUser : FirebaseUser? = null
+    private var user: User? = null
 
-    @SuppressLint("SetTextI18n")
+    init {
+        this.currentUser = getLoggedUser()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        FirebaseApp.initializeApp(baseContext)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Toast.makeText(this, currentUser.email, Toast.LENGTH_LONG).show()
+        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        user = mainViewModel.getUserDetails(currentUser?.uid!!)
 
-        if (currentUser.name != null){
-            binding.welcomeUser.text = "Welcome! ${this.currentUser.name}"
-        }else{
-            binding.welcomeUser.text = "Welcome! "
-        }
-
-
+        showUserInfo()
         setupButtonClick()
     }
 
@@ -56,22 +53,31 @@ class MainActivity : AppCompatActivity() {
 
         //Goals
         binding.decreaseGoalButton.setOnClickListener {
-            user.goals = decrease(user.goals)
-            binding.goalsValue.text = user.goals.toString()
+            user?.goals = decrease(user?.goals)
+            binding.goalsValue.text = user?.goals.toString()
+            saveDetails()
         }
         binding.addGoalButton.setOnClickListener {
-            user.goals = increment(user.goals)
-            binding.goalsValue.text = user.goals.toString()
+            user?.goals = increment(user?.goals)
+            binding.goalsValue.text = user?.goals.toString()
+            saveDetails()
         }
 
         //Matches
         binding.decreaseMatchButton.setOnClickListener {
-            user.matches = decrease(user.matches)
-            binding.matchesValue.text = user.matches.toString()
+            user?.matches = decrease(user?.matches)
+            binding.matchesValue.text = user?.matches.toString()
+            saveDetails()
         }
         binding.addMatchButton.setOnClickListener {
-            user.matches = increment(user.matches)
-            binding.matchesValue.text = user.matches.toString() }
+            user?.matches = increment(user?.matches)
+            binding.matchesValue.text = user?.matches.toString()
+            saveDetails()
+        }
+    }
+
+    private fun saveDetails(){
+        mainViewModel.saveDetails(user)
     }
 
     private fun increment(variable: Int?): Int {
@@ -114,17 +120,29 @@ class MainActivity : AppCompatActivity() {
         backToLogin()
     }
 
-    private fun getLoggedUser(): UserFirebase {
-        val firebaseUser = Firebase.auth.currentUser
+    private fun getLoggedUser(): FirebaseUser? {
+        return Firebase.auth.currentUser
+    }
 
-        if (firebaseUser!= null){
-            userFirebase.uid = firebaseUser.uid
-            userFirebase.name = firebaseUser.displayName
-            userFirebase.email = firebaseUser.email
-            userFirebase.isAuthenticated = true
-            userFirebase.isCreated = true
+    private fun loadUserInfo(): User {
+        var userInfo: User = User()
+        mainViewModel.getUserDetailsLiveData()?.observe(this, Observer {
+            userInfo = it
+        })
+        return userInfo
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun showUserInfo() {
+        if (user?.name.equals(null)){
+            binding.welcomeUser.text = "Welcome! "
         }
-        return userFirebase
+
+        binding.welcomeUser.text = "Welcome! ${this.user?.name}"
+        binding.userPositionValue.text = user?.position.toString()
+        binding.goalsValue.text = user?.goals.toString()
+        binding.matchesValue.text = user?.matches.toString()
+
     }
 
     private fun deleteUserFromSharedPrefs() {
@@ -142,7 +160,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun savePositionValue() {
-        user.position = binding.editTextPosition.text.toString()
-        binding.userPositionValue.text = user.position
+        user?.position = binding.editTextPosition.text.toString()
+        binding.userPositionValue.text = user?.position
+        saveDetails()
+        showOrHideEditPosition()
     }
 }

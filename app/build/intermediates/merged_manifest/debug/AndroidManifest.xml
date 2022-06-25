@@ -25,7 +25,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyGoalsKotlin" >
         <activity
-            android:name="com.example.mygoalskotlin.UI.Splash.SplashActivity"
+            android:name="com.example.mygoalskotlin.UI.Splash.View.SplashActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,12 +39,15 @@
         <activity
             android:name="com.example.mygoalskotlin.UI.Login.View.LoginActivity"
             android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
-        <activity android:name="com.example.mygoalskotlin.UI.Main.MainActivity" />
+        <activity android:name="com.example.mygoalskotlin.UI.Main.View.MainActivity" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
             android:directBootAware="true"
             android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
@@ -56,6 +59,9 @@
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"

@@ -5,9 +5,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.example.mygoalskotlin.Utils.Validator
 import com.example.mygoalskotlin.databinding.ActivityRegisterBinding
 import com.example.mygoalskotlin.Model.RegisterModel
+import com.example.mygoalskotlin.UI.Register.ViewModel.RegisterViewModel
 import com.example.mygoalskotlin.Utils.MessagesConstants.INVALID_EMAIL
 import com.example.mygoalskotlin.Utils.MessagesConstants.INVALID_PASSWORD
 import com.example.mygoalskotlin.Utils.MessagesConstants.NO_MATCH_PASSWORD
@@ -19,13 +23,12 @@ class RegisterActivity : AppCompatActivity() {
 
     private val validator: Validator by lazy { Validator() }
     private val registerModel: RegisterModel by lazy { RegisterModel() }
-    //private var firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
-    private var firebaseAuth: FirebaseAuth? = null
+
+    private lateinit var registerViewModel: RegisterViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        FirebaseApp.initializeApp(baseContext)
-        firebaseAuth = FirebaseAuth.getInstance()
+        registerViewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
 
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -52,19 +55,20 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun isValidUser(valid: Boolean){
         if (valid){
-            firebaseAuth?.createUserWithEmailAndPassword(
-                registerModel.email.toString(),
-                registerModel.password.toString()
-            )
-                ?.addOnCompleteListener {
-                    binding.registerProgressBar.visibility = View.VISIBLE
-                    if (it.isSuccessful){
-                        onBackPressed()
-                        this.finish()
-                    }else{
-                        Toast.makeText(this, it.exception?.message, Toast.LENGTH_LONG).show()
-                    }
+            binding.registerProgressBar.visibility = View.VISIBLE
+            registerViewModel.signup(registerModel)
+            registerViewModel.getMutableLiveData()?.observe(this, Observer {
+                if (it != null){
+                    onBackPressed()
+                    this.finish()
                 }
+            })
+            registerViewModel.getErrorLiveData()?.observe(this, Observer {
+                if (it != null){
+                    Toast.makeText(this, it.toString(), Toast.LENGTH_LONG).show()
+                }
+            })
+
         }
     }
 

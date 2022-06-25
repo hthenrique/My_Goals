@@ -1,45 +1,38 @@
 package com.example.mygoalskotlin.UI.Login.ViewModel
 
-import android.content.Intent
-import android.view.View
-import androidx.lifecycle.ViewModel
-import com.example.mygoalskotlin.Firebase.AuthListener
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import com.example.mygoalskotlin.Model.LoginModel
-import com.example.mygoalskotlin.UI.Register.View.RegisterActivity
-import io.reactivex.disposables.CompositeDisposable
+import com.example.mygoalskotlin.Model.repository.Repository
+import com.example.mygoalskotlin.Utils.Resource
+import com.google.firebase.auth.FirebaseUser
 
 
-class LoginViewModel(): ViewModel() {
+class LoginViewModel: AndroidViewModel {
+    private var repository: Repository? = null
+    private var LoginUserLiveData: MutableLiveData<FirebaseUser>? = null
+    private var errorMutableLiveData: MutableLiveData<String>? = null
 
-    private var email:String? = null
-    private var password:String? = null
-
-    private val loginModel: LoginModel
-
-    init {
-        this.loginModel = LoginModel()
+    constructor(application: Application) : super(application){
+        repository = Repository(application)
+        LoginUserLiveData = repository!!.getMutableLiveData()
+        errorMutableLiveData = repository!!.getErrorMutableLiveData()
     }
-
-    var authListener: AuthListener? = null
-    private val disposables = CompositeDisposable()
 
     fun login(loginModel: LoginModel){
-        if (loginModel.email!!.isEmpty() || loginModel.password!!.isEmpty()){
-            authListener?.onFailure("Invalid email or password")
-            return
+        repository?.loginExistentUser(loginModel)
+        if (LoginUserLiveData != null) {
+            Resource.Success(LoginUserLiveData)
         }
-        authListener?.onStarted()
-
+        Resource.Error("Login Failed", null)
     }
 
-    fun goToSignup(view: View){
-        Intent(view.context, RegisterActivity::class.java).also {
-            view.context.startActivity(it)
-        }
+    fun getLoginMutableLiveData(): MutableLiveData<FirebaseUser>?{
+        return LoginUserLiveData
     }
 
-    override fun onCleared() {
-        super.onCleared()
-        disposables.dispose()
+    fun getErrorLiveData(): MutableLiveData<String>?{
+        return errorMutableLiveData
     }
 }

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGoalsKotlin">
         <activity
-            android:name="com.example.mygoalskotlin.UI.Splash.SplashActivity"
+            android:name="com.example.mygoalskotlin.UI.Splash.View.SplashActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,7 @@
             android:theme="@style/Theme.MyGoalsKotlinNoActionBar"/>
         <activity android:name="com.example.mygoalskotlin.UI.Login.View.LoginActivity"
             android:theme="@style/Theme.MyGoalsKotlinNoActionBar"/>
-        <activity android:name="com.example.mygoalskotlin.UI.Main.MainActivity" />
+        <activity android:name="com.example.mygoalskotlin.UI.Main.View.MainActivity" />
     </application>
 
 </manifest>

@@ -77,9 +77,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     @SuppressLint("SimpleDateFormat")
-    private fun getCurrentDate(): Int? {
-        val dateFormat = SimpleDateFormat("yyyyMMddHHmmss")
-        return Integer.getInteger(dateFormat.format(Calendar.getInstance().time))
+    private fun getCurrentDate(): String {
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+        return dateFormat.format(Calendar.getInstance().time)
     }
 
 

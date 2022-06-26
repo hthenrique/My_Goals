@@ -85,7 +85,7 @@ class Repository {
                 val profile: DocumentSnapshot = it.result
                 user.email = profile.getString("email")
                 user.name = profile.getString("name")
-                user.lastUpdate = profile.get("lastUpdate", Int::class.java)
+                user.lastUpdate = profile.getString("lastUpdate")
                 user.matches = profile.get("matches", Int::class.java)
                 user.goals = profile.get("goals", Int::class.java)
                 user.position = profile.getString("position")

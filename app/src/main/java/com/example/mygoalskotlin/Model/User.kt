@@ -15,7 +15,7 @@ open class User: BaseObservable() {
     var position: String? = null
     var goals: Int? = 0
     var matches: Int? = 0
-    var lastUpdate: Int? = 0
+    var lastUpdate: String? = null
 
     override fun toString(): String {
         return "User(uid='$uid', name=$name, email=$email, position=$position, goals=$goals, matches=$matches, lastUpdate='$lastUpdate')"

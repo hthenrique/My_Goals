@@ -2,13 +2,14 @@ package com.example.mygoalskotlin.UI.Main.ViewModel
 
 import android.annotation.SuppressLint
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.mygoalskotlin.Model.User
 import com.example.mygoalskotlin.Model.repository.Repository
 import com.google.firebase.auth.FirebaseUser
-import java.text.SimpleDateFormat
-import java.util.*
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
     private var repository: Repository? = null
@@ -76,10 +77,27 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         return errorMutableLiveData
     }
 
-    @SuppressLint("SimpleDateFormat")
+    @SuppressLint("SimpleDateFormat", "NewApi")
     private fun getCurrentDate(): String {
-        val dateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-        return dateFormat.format(Calendar.getInstance().time)
+        val dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")
+        return dateFormat.format(LocalDateTime.now())
+    }
+
+    @SuppressLint("SimpleDateFormat", "NewApi")
+    private fun compareDates(firebaseDate: String, databaseDate: String){
+        val dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")
+        val firebase: LocalDateTime = LocalDateTime.parse(firebaseDate, dateFormat)
+        val database: LocalDateTime = LocalDateTime.parse(databaseDate, dateFormat)
+
+        when{
+            firebase > database -> {
+                Log.i("Compare Dates", "Firebase is the new")
+            }
+            firebase < database -> {
+                Log.i("Compare Dates", "Database is the new")
+            }
+        }
+
     }
 
 

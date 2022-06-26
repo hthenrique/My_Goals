@@ -41,6 +41,10 @@ class Repository {
             ?.addOnCompleteListener {
                 if (it.isSuccessful){
                     userMutableLiveData?.value = firebaseAuth!!.currentUser
+                    user.name = registerModel.name
+                    user.email = registerModel.email
+                    user.uid = userMutableLiveData?.value?.uid
+                    saveUserDetailsFirebase(user)
                 }else{
                     errorMutableLiveData?.value = it.exception?.message.toString()
                 }

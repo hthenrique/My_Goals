@@ -53,13 +53,11 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-
         Handler().postDelayed({
             binding.loadingLayout.visibility = View.GONE
             showUserInfo()
             setupButtonClick()
-        }, 2000)
-
+        }, 3000)
     }
 
     private fun setupButtonClick() {
@@ -69,25 +67,25 @@ class MainActivity : AppCompatActivity() {
 
         //Goals
         binding.decreaseGoalButton.setOnClickListener {
-            user?.goals = decrease(user?.goals)
-            binding.goalsValue.text = user?.goals.toString()
+            user.goals = decrease(user.goals)
+            binding.goalsValue.text = user.goals.toString()
             saveDetails()
         }
         binding.addGoalButton.setOnClickListener {
-            user?.goals = increment(user?.goals)
-            binding.goalsValue.text = user?.goals.toString()
+            user.goals = increment(user.goals)
+            binding.goalsValue.text = user.goals.toString()
             saveDetails()
         }
 
         //Matches
         binding.decreaseMatchButton.setOnClickListener {
-            user?.matches = decrease(user?.matches)
-            binding.matchesValue.text = user?.matches.toString()
+            user.matches = decrease(user.matches)
+            binding.matchesValue.text = user.matches.toString()
             saveDetails()
         }
         binding.addMatchButton.setOnClickListener {
-            user?.matches = increment(user?.matches)
-            binding.matchesValue.text = user?.matches.toString()
+            user.matches = increment(user.matches)
+            binding.matchesValue.text = user.matches.toString()
             saveDetails()
         }
     }
@@ -150,14 +148,14 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun showUserInfo() {
-        if (user?.name.equals(null)){
+        if (user.name.equals(null) || user.name.equals("null")){
             binding.welcomeUser.text = "Welcome! "
         }
 
-        binding.welcomeUser.text = "Welcome! ${this.user?.name}"
-        binding.userPositionValue.text = user?.position.toString()
-        binding.goalsValue.text = user?.goals.toString()
-        binding.matchesValue.text = user?.matches.toString()
+        binding.welcomeUser.text = "Welcome! ${this.user.name}"
+        binding.userPositionValue.text = user.position
+        binding.goalsValue.text = user.goals.toString()
+        binding.matchesValue.text = user.matches.toString()
 
     }
 
@@ -176,8 +174,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun savePositionValue() {
-        user?.position = binding.editTextPosition.text.toString()
-        binding.userPositionValue.text = user?.position
+        user.position = binding.editTextPosition.text.toString()
+        binding.userPositionValue.text = user.position
         saveDetails()
         showOrHideEditPosition()
     }

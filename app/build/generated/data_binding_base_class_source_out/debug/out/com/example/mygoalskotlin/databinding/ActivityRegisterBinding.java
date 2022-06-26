@@ -38,6 +38,9 @@ public final class ActivityRegisterBinding implements ViewBinding {
   public final EditText editTextRegisterEmail;
 
   @NonNull
+  public final EditText editTextRegisterName;
+
+  @NonNull
   public final ProgressBar registerProgressBar;
 
   @NonNull
@@ -49,14 +52,16 @@ public final class ActivityRegisterBinding implements ViewBinding {
   private ActivityRegisterBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button buttonCreateUser, @NonNull ConstraintLayout constraintLayout2,
       @NonNull EditText editTextConfirmPassword, @NonNull EditText editTextPassword,
-      @NonNull EditText editTextRegisterEmail, @NonNull ProgressBar registerProgressBar,
-      @NonNull TextView textView, @NonNull TextView txtError) {
+      @NonNull EditText editTextRegisterEmail, @NonNull EditText editTextRegisterName,
+      @NonNull ProgressBar registerProgressBar, @NonNull TextView textView,
+      @NonNull TextView txtError) {
     this.rootView = rootView;
     this.buttonCreateUser = buttonCreateUser;
     this.constraintLayout2 = constraintLayout2;
     this.editTextConfirmPassword = editTextConfirmPassword;
     this.editTextPassword = editTextPassword;
     this.editTextRegisterEmail = editTextRegisterEmail;
+    this.editTextRegisterName = editTextRegisterName;
     this.registerProgressBar = registerProgressBar;
     this.textView = textView;
     this.txtError = txtError;
@@ -119,6 +124,12 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.editTextRegisterName;
+      EditText editTextRegisterName = ViewBindings.findChildViewById(rootView, id);
+      if (editTextRegisterName == null) {
+        break missingId;
+      }
+
       id = R.id.registerProgressBar;
       ProgressBar registerProgressBar = ViewBindings.findChildViewById(rootView, id);
       if (registerProgressBar == null) {
@@ -139,7 +150,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
 
       return new ActivityRegisterBinding((ConstraintLayout) rootView, buttonCreateUser,
           constraintLayout2, editTextConfirmPassword, editTextPassword, editTextRegisterEmail,
-          registerProgressBar, textView, txtError);
+          editTextRegisterName, registerProgressBar, textView, txtError);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

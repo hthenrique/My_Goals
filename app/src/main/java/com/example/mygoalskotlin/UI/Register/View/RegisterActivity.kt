@@ -45,6 +45,7 @@ class RegisterActivity : AppCompatActivity() {
     private fun setupButtonRegister() {
 
         binding.buttonCreateUser.setOnClickListener {
+            registerModel.name = binding.editTextRegisterName.text.toString().trim()
             registerModel.email = binding.editTextRegisterEmail.text.toString().trim()
             registerModel.password = binding.editTextPassword.text.toString().trim()
             registerModel.confirmPassword = binding.editTextConfirmPassword.text.toString().trim()

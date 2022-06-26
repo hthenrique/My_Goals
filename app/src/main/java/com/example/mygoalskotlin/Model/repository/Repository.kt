@@ -26,7 +26,7 @@ class Repository {
 
     constructor(application: Application?) {
         this.application = application
-        getLoggedUser()
+        getCurrentUser()
         firebaseAuth = FirebaseAuth.getInstance()
         userMutableLiveData = MutableLiveData()
         userDetailsLiveData = MutableLiveData()
@@ -81,7 +81,7 @@ class Repository {
                 val profile: DocumentSnapshot = it.result
                 user.email = profile.getString("email")
                 user.name = profile.getString("name")
-                user.lastUpdate = profile.getString("lastUpdate").toString()
+                user.lastUpdate = profile.get("lastUpdate", Int::class.java)
                 user.matches = profile.get("matches", Int::class.java)
                 user.goals = profile.get("goals", Int::class.java)
                 user.position = profile.getString("position")
@@ -107,7 +107,7 @@ class Repository {
             }*/
     }
 
-    fun getLoggedUser(): FirebaseUser? {
+    fun getCurrentUser(): FirebaseUser? {
         userMutableLiveData?.value = Firebase.auth.currentUser
         return Firebase.auth.currentUser
     }

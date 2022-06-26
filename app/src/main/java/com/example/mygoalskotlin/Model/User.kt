@@ -13,22 +13,9 @@ open class User: BaseObservable() {
     var name: String? = null
     var email: String? = null
     var position: String? = null
-
-    @get:Bindable
     var goals: Int? = 0
-        set(value) {
-            field = value
-            notifyPropertyChanged(BR._all)
-        }
-
-    @get:Bindable
     var matches: Int? = 0
-        set(value) {
-            field = value
-            notifyPropertyChanged(BR._all)
-        }
-
-    var lastUpdate: String = ""
+    var lastUpdate: Int? = 0
 
     override fun toString(): String {
         return "User(uid='$uid', name=$name, email=$email, position=$position, goals=$goals, matches=$matches, lastUpdate='$lastUpdate')"

@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModel
 import com.example.mygoalskotlin.Firebase.AuthListener
 import com.example.mygoalskotlin.UI.Login.View.LoginActivity
 import com.example.mygoalskotlin.Model.RegisterModel
+import com.example.mygoalskotlin.Model.User
 import com.example.mygoalskotlin.Model.repository.Repository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -24,6 +25,13 @@ class RegisterViewModel: AndroidViewModel {
         repository = Repository(application)
         mutableLiveData = repository!!.getMutableLiveData()
         errorMutableLiveData = repository!!.getErrorMutableLiveData()
+    }
+
+    fun saveUserDetails() {
+        var user: User = User()
+        user.uid = mutableLiveData?.value?.uid
+        user.email = mutableLiveData?.value?.email
+        repository!!.saveUserDetailsFirebase(user)
     }
 
 

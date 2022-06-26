@@ -10,30 +10,39 @@ import com.google.firebase.auth.FirebaseUser
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainViewModel: AndroidViewModel {
+class MainViewModel(application: Application) : AndroidViewModel(application) {
     private var repository: Repository? = null
     private var saveUserDetailsFirebase: Boolean? = null
     private var currentUserMutableLiveData: MutableLiveData<FirebaseUser>? = null
     private var userDetailsLiveData: MutableLiveData<User>? = null
     private var errorMutableLiveData: MutableLiveData<String>? = null
+    private var currentUser: FirebaseUser? = null
 
-    constructor(application: Application) : super(application){
+    init {
         repository = Repository(application)
-        getLoggedUser()
-        userDetailsLiveData = repository!!.getUserDetailsLiveData(getLoggedUser()?.uid!!)
-        currentUserMutableLiveData = repository!!.getMutableLiveData()
-        errorMutableLiveData = repository!!.getErrorMutableLiveData()
+        this.currentUser = getCurrentUser()
+        getUserDetailsLiveData()
+        getCurrentUserLiveData()
+        getErrorLiveData()
     }
 
-    fun getLoggedUser(): FirebaseUser? {
-        return repository!!.getLoggedUser()
+    private fun getCurrentUser(): FirebaseUser? {
+        return repository!!.getCurrentUser()
     }
 
-    fun getUserDetails(uid: String): User {
-        return repository!!.getUserDetailsFromFirebase(uid)
+    fun getUserDetails(): User {
+        var userDetails = repository!!.getUserDetailsFromFirebase(currentUser?.uid!!)
+        if (userDetails != null){
+            return userDetails
+        }else{
+            userDetails = User()
+
+        }
+        return userDetails
     }
 
     fun updateUser(){
+
         repository!!.updateUserFirebase()
     }
 
@@ -53,17 +62,24 @@ class MainViewModel: AndroidViewModel {
     }
 
     fun getUserDetailsLiveData(): MutableLiveData<User>? {
+        userDetailsLiveData = repository!!.getUserDetailsLiveData(currentUser?.uid!!)
         return userDetailsLiveData
     }
 
-    fun getLoggedUserLiveData(): MutableLiveData<FirebaseUser>? {
+    fun getCurrentUserLiveData(): MutableLiveData<FirebaseUser>? {
+        currentUserMutableLiveData = repository!!.getMutableLiveData()
         return currentUserMutableLiveData
     }
 
+    fun getErrorLiveData(): MutableLiveData<String>? {
+        errorMutableLiveData = repository!!.getErrorMutableLiveData()
+        return errorMutableLiveData
+    }
+
     @SuppressLint("SimpleDateFormat")
-    private fun getCurrentDate(): String {
+    private fun getCurrentDate(): Int? {
         val dateFormat = SimpleDateFormat("yyyyMMddHHmmss")
-        return dateFormat.format(Calendar.getInstance().time).toString()
+        return Integer.getInteger(dateFormat.format(Calendar.getInstance().time))
     }
 
 

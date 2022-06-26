@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -71,10 +72,16 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ConstraintLayout linearLayout5;
 
   @NonNull
+  public final ConstraintLayout loadingLayout;
+
+  @NonNull
   public final TextView matchesValue;
 
   @NonNull
   public final TextView position;
+
+  @NonNull
+  public final ProgressBar progressBar2;
 
   @NonNull
   public final TextView userPositionValue;
@@ -93,7 +100,8 @@ public final class ActivityMainBinding implements ViewBinding {
       @NonNull TextView goalsValue, @NonNull LinearLayout linearLayout,
       @NonNull LinearLayout linearLayout2, @NonNull LinearLayout linearLayout3,
       @NonNull ConstraintLayout linearLayout4, @NonNull ConstraintLayout linearLayout5,
-      @NonNull TextView matchesValue, @NonNull TextView position,
+      @NonNull ConstraintLayout loadingLayout, @NonNull TextView matchesValue,
+      @NonNull TextView position, @NonNull ProgressBar progressBar2,
       @NonNull TextView userPositionValue, @NonNull TextView welcomeUser) {
     this.rootView = rootView;
     this.addGoalButton = addGoalButton;
@@ -112,8 +120,10 @@ public final class ActivityMainBinding implements ViewBinding {
     this.linearLayout3 = linearLayout3;
     this.linearLayout4 = linearLayout4;
     this.linearLayout5 = linearLayout5;
+    this.loadingLayout = loadingLayout;
     this.matchesValue = matchesValue;
     this.position = position;
+    this.progressBar2 = progressBar2;
     this.userPositionValue = userPositionValue;
     this.welcomeUser = welcomeUser;
   }
@@ -241,6 +251,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.loadingLayout;
+      ConstraintLayout loadingLayout = ViewBindings.findChildViewById(rootView, id);
+      if (loadingLayout == null) {
+        break missingId;
+      }
+
       id = R.id.matchesValue;
       TextView matchesValue = ViewBindings.findChildViewById(rootView, id);
       if (matchesValue == null) {
@@ -250,6 +266,12 @@ public final class ActivityMainBinding implements ViewBinding {
       id = R.id.position;
       TextView position = ViewBindings.findChildViewById(rootView, id);
       if (position == null) {
+        break missingId;
+      }
+
+      id = R.id.progressBar2;
+      ProgressBar progressBar2 = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar2 == null) {
         break missingId;
       }
 
@@ -268,8 +290,8 @@ public final class ActivityMainBinding implements ViewBinding {
       return new ActivityMainBinding((ConstraintLayout) rootView, addGoalButton, addMatchButton,
           cancelEditButton, constraintLayout, decreaseGoalButton, decreaseMatchButton,
           editDoneButton, editPositionButton, editPositionNameLayout, editTextPosition, goalsValue,
-          linearLayout, linearLayout2, linearLayout3, linearLayout4, linearLayout5, matchesValue,
-          position, userPositionValue, welcomeUser);
+          linearLayout, linearLayout2, linearLayout3, linearLayout4, linearLayout5, loadingLayout,
+          matchesValue, position, progressBar2, userPositionValue, welcomeUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

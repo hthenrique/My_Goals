@@ -59,6 +59,7 @@ class RegisterActivity : AppCompatActivity() {
             registerViewModel.signup(registerModel)
             registerViewModel.getMutableLiveData()?.observe(this, Observer {
                 if (it != null){
+                    registerViewModel.saveUserDetails()
                     onBackPressed()
                     this.finish()
                 }

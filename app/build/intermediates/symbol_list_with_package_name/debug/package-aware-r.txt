@@ -2055,6 +2055,7 @@ id linearLayout4
 id linearLayout5
 id listMode
 id list_item
+id loadingLayout
 id loginProgressBar
 id logoutUser
 id masked
@@ -2141,6 +2142,7 @@ id pin
 id position
 id postLayout
 id profile
+id progressBar2
 id progress_circular
 id progress_horizontal
 id radio

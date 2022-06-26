@@ -5,6 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.os.Handler
+import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -25,12 +27,8 @@ import com.google.firebase.ktx.Firebase
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var mainViewModel: MainViewModel
-    private var currentUser : FirebaseUser? = null
-    private var user: User? = null
+    private val user: User by lazy { User() }
 
-    init {
-        this.currentUser = getLoggedUser()
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,10 +38,28 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        user = mainViewModel.getUserDetails(currentUser?.uid!!)
+        binding.loadingLayout.visibility = View.VISIBLE
+        mainViewModel.getUserDetailsLiveData()?.observe(this, Observer {
+            if (it != null){
+                user.apply {
+                    user.uid = it.uid
+                    name = it.name
+                    email = it.email
+                    position = it.position
+                    goals = it.goals
+                    matches = it.matches
+                    lastUpdate = it.lastUpdate
+                }
+            }
+        })
 
-        showUserInfo()
-        setupButtonClick()
+
+        Handler().postDelayed({
+            binding.loadingLayout.visibility = View.GONE
+            showUserInfo()
+            setupButtonClick()
+        }, 2000)
+
     }
 
     private fun setupButtonClick() {

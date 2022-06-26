@@ -15,14 +15,14 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import io.reactivex.disposables.CompositeDisposable
 
-class RegisterViewModel: AndroidViewModel {
+class RegisterViewModel : ViewModel() {
 
     private var repository: Repository? = null
     private var mutableLiveData: MutableLiveData<FirebaseUser>? = null
     private var errorMutableLiveData: MutableLiveData<String>? = null
 
-    constructor(application: Application) : super(application){
-        repository = Repository(application)
+    init {
+        repository = Repository()
         mutableLiveData = repository!!.getMutableLiveData()
         errorMutableLiveData = repository!!.getErrorMutableLiveData()
     }

@@ -3,19 +3,20 @@ package com.example.mygoalskotlin.UI.Login.ViewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.example.mygoalskotlin.Model.LoginModel
 import com.example.mygoalskotlin.Model.repository.Repository
 import com.example.mygoalskotlin.Utils.Resource
 import com.google.firebase.auth.FirebaseUser
 
 
-class LoginViewModel: AndroidViewModel {
+class LoginViewModel : ViewModel() {
     private var repository: Repository? = null
     private var LoginUserLiveData: MutableLiveData<FirebaseUser>? = null
     private var errorMutableLiveData: MutableLiveData<String>? = null
 
-    constructor(application: Application) : super(application){
-        repository = Repository(application)
+    init {
+        repository = Repository()
         LoginUserLiveData = repository!!.getMutableLiveData()
         errorMutableLiveData = repository!!.getErrorMutableLiveData()
     }

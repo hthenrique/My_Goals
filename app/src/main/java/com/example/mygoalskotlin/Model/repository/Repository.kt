@@ -15,7 +15,7 @@ import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
-class Repository {
+class Repository() {
     private var application: Application? = null
     private var firebaseAuth: FirebaseAuth? = null
     private var userMutableLiveData: MutableLiveData<FirebaseUser>? = null
@@ -24,8 +24,7 @@ class Repository {
 
     private val user: User by lazy { User() }
 
-    constructor(application: Application?) {
-        this.application = application
+    init {
         getCurrentUser()
         firebaseAuth = FirebaseAuth.getInstance()
         userMutableLiveData = MutableLiveData()

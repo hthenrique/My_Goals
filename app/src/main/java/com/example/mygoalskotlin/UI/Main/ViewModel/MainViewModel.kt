@@ -5,13 +5,14 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.example.mygoalskotlin.Model.User
 import com.example.mygoalskotlin.Model.repository.Repository
 import com.google.firebase.auth.FirebaseUser
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-class MainViewModel(application: Application) : AndroidViewModel(application) {
+class MainViewModel: ViewModel() {
     private var repository: Repository? = null
     private var saveUserDetailsFirebase: Boolean? = null
     private var currentUserMutableLiveData: MutableLiveData<FirebaseUser>? = null
@@ -20,7 +21,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private var currentUser: FirebaseUser? = null
 
     init {
-        repository = Repository(application)
+        repository = Repository()
         this.currentUser = getCurrentUser()
         getUserDetailsLiveData()
         getCurrentUserLiveData()

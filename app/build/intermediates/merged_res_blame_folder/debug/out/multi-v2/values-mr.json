@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\h.da.silva.teixeira\\AndroidStudioProjects\\MyGoalsKotlin\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
+            "outputFile": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\h.da.silva.teixeira\\.gradle\\caches\\transforms-3\\9354eda31bba610a1e7a6840e5dc6649\\transformed\\core-1.5.0\\res\\values-mr\\values-mr.xml",

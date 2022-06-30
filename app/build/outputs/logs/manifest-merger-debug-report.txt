@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
 MERGED from [androidx.databinding:databinding-adapters:7.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\58eeb7965aa57c4abd0475d7920a6f5f\transformed\databinding-adapters-7.1.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-ktx:7.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ca4b1ff276590c5ea1110a33855cda3a\transformed\databinding-ktx-7.1.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:7.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\46ad640bc4eb8234bb01042af4d00fc2\transformed\databinding-runtime-7.1.2\AndroidManifest.xml:17:1-24:12
@@ -92,25 +92,25 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\h.da.silva.teixe
 MERGED from [androidx.print:print:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\6a70772dffd1dfed1ba2c3800e1880e2\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3cbd55e26b3111309ccc2290138c38a9\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ded848caa75ad9dd258d221413f1038c\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
 	package
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:3:5-40
-		INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:2:1-28:12
-		INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:2:1-28:12
-		INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
+		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:5:5-26:19
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:5:5-26:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\e161faad56d422d5d42ec819680d039e\transformed\firebase-firestore-ktx-24.1.2\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\e161faad56d422d5d42ec819680d039e\transformed\firebase-firestore-ktx-24.1.2\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:19.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ef1ee254506a733ee83d4147a86e4d38\transformed\firebase-analytics-ktx-19.0.0\AndroidManifest.xml:7:5-15:19
@@ -174,53 +174,53 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\h.
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\9354eda31bba610a1e7a6840e5dc6649\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:11:9-51
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:11:9-51
 activity#com.example.mygoalskotlin.UI.Splash.View.SplashActivity
-ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:12:9-20:20
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:12:9-20:20
 	android:theme
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:14:13-72
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:14:13-72
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:13:13-83
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:13:13-83
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:15:13-19:29
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:18:27-74
 activity#com.example.mygoalskotlin.UI.Register.View.RegisterActivity
-ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:21:9-22:68
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:21:9-22:68
 	android:theme
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:22:13-66
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:22:13-66
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:21:19-93
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:21:19-93
 activity#com.example.mygoalskotlin.UI.Login.View.LoginActivity
-ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:23:9-24:68
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:23:9-24:68
 	android:theme
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:24:13-66
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:24:13-66
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:23:19-87
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:23:19-87
 activity#com.example.mygoalskotlin.UI.Main.View.MainActivity
-ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:25:9-88
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:25:9-88
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml:25:19-85
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:25:19-85
 uses-sdk
-INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:7.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\58eeb7965aa57c4abd0475d7920a6f5f\transformed\databinding-adapters-7.1.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:databinding-adapters:7.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\58eeb7965aa57c4abd0475d7920a6f5f\transformed\databinding-adapters-7.1.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:databinding-ktx:7.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ca4b1ff276590c5ea1110a33855cda3a\transformed\databinding-ktx-7.1.2\AndroidManifest.xml:20:5-22:41
@@ -397,16 +397,16 @@ MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\h.da.si
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3cbd55e26b3111309ccc2290138c38a9\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ded848caa75ad9dd258d221413f1038c\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ded848caa75ad9dd258d221413f1038c\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\h.da.silva.teixeira\AndroidStudioProjects\MyGoalsKotlin\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\e161faad56d422d5d42ec819680d039e\transformed\firebase-firestore-ktx-24.1.2\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:19.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ef1ee254506a733ee83d4147a86e4d38\transformed\firebase-analytics-ktx-19.0.0\AndroidManifest.xml:8:9-14:19

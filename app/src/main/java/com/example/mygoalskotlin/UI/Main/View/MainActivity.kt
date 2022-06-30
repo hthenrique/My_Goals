@@ -6,13 +6,11 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.mygoalskotlin.Model.User
@@ -41,6 +39,9 @@ class MainActivity : AppCompatActivity() {
         binding.loadingLayout.visibility = View.VISIBLE
         mainViewModel.getUserDetailsLiveData()?.observe(this, Observer {
             if (it != null){
+                binding.loadingLayout.visibility = View.GONE
+                showUserInfo(it)
+                setupButtonClick()
                 user.apply {
                     user.uid = it.uid
                     name = it.name
@@ -53,11 +54,19 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        Handler().postDelayed({
-            binding.loadingLayout.visibility = View.GONE
-            showUserInfo()
-            setupButtonClick()
-        }, 3000)
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun showUserInfo(user: User) {
+        if (user.name.equals(null) || user.name.equals("null")){
+            binding.welcomeUser.text = "Welcome! "
+        }
+
+        binding.welcomeUser.text = "Welcome! ${user.name}"
+        binding.userPositionValue.text = user.position
+        binding.goalsValue.text = user.goals.toString()
+        binding.matchesValue.text = user.matches.toString()
+
     }
 
     private fun setupButtonClick() {
@@ -144,19 +153,6 @@ class MainActivity : AppCompatActivity() {
             userInfo = it
         })
         return userInfo
-    }
-
-    @SuppressLint("SetTextI18n")
-    private fun showUserInfo() {
-        if (user.name.equals(null) || user.name.equals("null")){
-            binding.welcomeUser.text = "Welcome! "
-        }
-
-        binding.welcomeUser.text = "Welcome! ${this.user.name}"
-        binding.userPositionValue.text = user.position
-        binding.goalsValue.text = user.goals.toString()
-        binding.matchesValue.text = user.matches.toString()
-
     }
 
     private fun deleteUserFromSharedPrefs() {

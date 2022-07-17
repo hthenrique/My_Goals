@@ -40,24 +40,19 @@ class MainActivity : AppCompatActivity() {
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         binding.loadingLayout.visibility = View.VISIBLE
         mainViewModel.getUserDetailsLiveData()?.observe(this, Observer {
-            if (it != null){
-                user.apply {
-                    user.uid = it.uid
-                    name = it.name
-                    email = it.email
-                    position = it.position
-                    goals = it.goals
-                    matches = it.matches
-                    lastUpdate = it.lastUpdate
-                }
-            }
-        })
-
-        Handler().postDelayed({
             binding.loadingLayout.visibility = View.GONE
-            showUserInfo()
+            user.apply {
+                user.uid = it.uid
+                name = it.name
+                email = it.email
+                position = it.position
+                goals = it.goals
+                matches = it.matches
+                lastUpdate = it.lastUpdate
+            }
+            showUserInfo(user)
             setupButtonClick()
-        }, 3000)
+        })
     }
 
     private fun setupButtonClick() {
@@ -134,25 +129,13 @@ class MainActivity : AppCompatActivity() {
         backToLogin()
     }
 
-    private fun getLoggedUser(): FirebaseUser? {
-        return Firebase.auth.currentUser
-    }
-
-    private fun loadUserInfo(): User {
-        var userInfo: User = User()
-        mainViewModel.getUserDetailsLiveData()?.observe(this, Observer {
-            userInfo = it
-        })
-        return userInfo
-    }
-
     @SuppressLint("SetTextI18n")
-    private fun showUserInfo() {
+    private fun showUserInfo(user: User) {
         if (user.name.equals(null) || user.name.equals("null")){
             binding.welcomeUser.text = "Welcome! "
         }
 
-        binding.welcomeUser.text = "Welcome! ${this.user.name}"
+        binding.welcomeUser.text = "Welcome! ${user.name}"
         binding.userPositionValue.text = user.position
         binding.goalsValue.text = user.goals.toString()
         binding.matchesValue.text = user.matches.toString()

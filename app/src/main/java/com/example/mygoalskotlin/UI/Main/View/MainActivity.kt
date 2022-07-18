@@ -19,6 +19,7 @@ import com.example.mygoalskotlin.Model.User
 import com.example.mygoalskotlin.R
 import com.example.mygoalskotlin.UI.Login.View.LoginActivity
 import com.example.mygoalskotlin.UI.Main.ViewModel.MainViewModel
+import com.example.mygoalskotlin.UI.Main.ViewModel.MainViewModelFactory
 import com.example.mygoalskotlin.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -37,7 +38,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        val viewModelFactory = MainViewModelFactory(this.application)
+        mainViewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
         binding.loadingLayout.visibility = View.VISIBLE
         mainViewModel.getUserDetailsLiveData()?.observe(this, Observer {
             binding.loadingLayout.visibility = View.GONE

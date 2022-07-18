@@ -12,6 +12,7 @@ MERGED from [androidx.preference:preference-ktx:1.1.1] C:\Users\h.da.silva.teixe
 MERGED from [androidx.fragment:fragment-ktx:1.3.5] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\5e16c4dcf40ad30b041927659b725451\transformed\fragment-ktx-1.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\9d4913b29a84aa255e459e814d6d99e3\transformed\activity-ktx-1.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.5.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\8e444d1a0ab9f4738d21940d3ac21090\transformed\core-ktx-1.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.room:room-ktx:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\a10e6e4c3dac3390e160c7476525f1ec\transformed\room-ktx-2.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\216ea2ca4b8d1351513b2470dfb7ad37\transformed\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\c186d873576c730aae5d076d66cbaa1a\transformed\lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\24701023d5ac85da41bc73fdabe4e223\transformed\lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
@@ -24,6 +25,7 @@ MERGED from [com.google.android.material:material:1.3.0] C:\Users\h.da.silva.tei
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\83ab3f49a9c2b6df3d8d644be8adb2f3\transformed\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.preference:preference:1.1.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\85129aa3fdc3bb456324e6db265bb762\transformed\preference-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\4219e5974e355916a1d7a28aa4467b74\transformed\appcompat-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\485483053f6102bd5cbce6b2ef32ecea\transformed\room-runtime-2.3.0\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\c41a22e52392a6dc5a75c1d03800c866\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\2a4fe10e123e87b12953d5db6e4ab854\transformed\firebase-auth-21.0.1\AndroidManifest.xml:17:1-83:12
 MERGED from [com.google.firebase:firebase-core:20.0.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\e3b7290f45df7778987d191596fa25bf\transformed\firebase-core-20.0.2\AndroidManifest.xml:2:1-9:12
@@ -81,6 +83,8 @@ MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\h.da.silva.teixeira\
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\61a0d5562773f7458b7d4106fc8b4678\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\b5e980f537dd399b93e6c8998a9aceaf\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\cf7a7a6e58ebdefadfcc2d6f66da3a74\transformed\firebase-components-17.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\f4926e50c1a08fe4f4b19ff2ac234500\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\63795198a7571cc47e89af6f80564409\transformed\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\fec2ddfe8c488bda303192bab0b28808\transformed\lifecycle-livedata-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3142226485927898b1ecd26912c3bcbd\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\48992647fbaeb31c87e7514aae9f7b83\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
@@ -90,7 +94,7 @@ MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\h.da.silva.teixeira\.gradl
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\fb8c2a71231b6352e63e632a48849fed\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\f67c0bd9ed65b2d96e81338470b5ba01\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\6a70772dffd1dfed1ba2c3800e1880e2\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3cbd55e26b3111309ccc2290138c38a9\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\e1f3f25e4b07053dcaa91c5c27efbd07\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ded848caa75ad9dd258d221413f1038c\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
 INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-28:12
@@ -123,6 +127,8 @@ MERGED from [com.google.android.material:material:1.3.0] C:\Users\h.da.silva.tei
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\911aa119bd793fb323d1dd651cc81f49\transformed\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\83ab3f49a9c2b6df3d8d644be8adb2f3\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\83ab3f49a9c2b6df3d8d644be8adb2f3\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\485483053f6102bd5cbce6b2ef32ecea\transformed\room-runtime-2.3.0\AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\485483053f6102bd5cbce6b2ef32ecea\transformed\room-runtime-2.3.0\AndroidManifest.xml:24:5-29:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\c41a22e52392a6dc5a75c1d03800c866\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\c41a22e52392a6dc5a75c1d03800c866\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\2a4fe10e123e87b12953d5db6e4ab854\transformed\firebase-auth-21.0.1\AndroidManifest.xml:26:5-81:19
@@ -237,6 +243,8 @@ MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\h.da.silva.teixeira\
 MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\9d4913b29a84aa255e459e814d6d99e3\transformed\activity-ktx-1.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-ktx:1.5.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\8e444d1a0ab9f4738d21940d3ac21090\transformed\core-ktx-1.5.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.5.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\8e444d1a0ab9f4738d21940d3ac21090\transformed\core-ktx-1.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.room:room-ktx:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\a10e6e4c3dac3390e160c7476525f1ec\transformed\room-ktx-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\a10e6e4c3dac3390e160c7476525f1ec\transformed\room-ktx-2.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\216ea2ca4b8d1351513b2470dfb7ad37\transformed\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\216ea2ca4b8d1351513b2470dfb7ad37\transformed\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\c186d873576c730aae5d076d66cbaa1a\transformed\lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
@@ -261,6 +269,8 @@ MERGED from [androidx.preference:preference:1.1.1] C:\Users\h.da.silva.teixeira\
 MERGED from [androidx.preference:preference:1.1.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\85129aa3fdc3bb456324e6db265bb762\transformed\preference-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\4219e5974e355916a1d7a28aa4467b74\transformed\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\4219e5974e355916a1d7a28aa4467b74\transformed\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\485483053f6102bd5cbce6b2ef32ecea\transformed\room-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\485483053f6102bd5cbce6b2ef32ecea\transformed\room-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\c41a22e52392a6dc5a75c1d03800c866\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\c41a22e52392a6dc5a75c1d03800c866\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\2a4fe10e123e87b12953d5db6e4ab854\transformed\firebase-auth-21.0.1\AndroidManifest.xml:21:5-44
@@ -375,6 +385,10 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\h.da.silva.teixeira\.gra
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\b5e980f537dd399b93e6c8998a9aceaf\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\cf7a7a6e58ebdefadfcc2d6f66da3a74\transformed\firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\cf7a7a6e58ebdefadfcc2d6f66da3a74\transformed\firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\f4926e50c1a08fe4f4b19ff2ac234500\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\f4926e50c1a08fe4f4b19ff2ac234500\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\63795198a7571cc47e89af6f80564409\transformed\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\63795198a7571cc47e89af6f80564409\transformed\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\fec2ddfe8c488bda303192bab0b28808\transformed\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\fec2ddfe8c488bda303192bab0b28808\transformed\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3142226485927898b1ecd26912c3bcbd\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
@@ -393,8 +407,8 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\h.da.silva.teixe
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\f67c0bd9ed65b2d96e81338470b5ba01\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\6a70772dffd1dfed1ba2c3800e1880e2\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\6a70772dffd1dfed1ba2c3800e1880e2\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3cbd55e26b3111309ccc2290138c38a9\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3cbd55e26b3111309ccc2290138c38a9\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\e1f3f25e4b07053dcaa91c5c27efbd07\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\e1f3f25e4b07053dcaa91c5c27efbd07\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ded848caa75ad9dd258d221413f1038c\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ded848caa75ad9dd258d221413f1038c\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
@@ -457,6 +471,14 @@ ADDED from [com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\h.da.silva.
 		ADDED from [com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\07707872291fabdd71b8a69f21a6d2e4\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:17:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\07707872291fabdd71b8a69f21a6d2e4\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:16:17-113
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\485483053f6102bd5cbce6b2ef32ecea\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\485483053f6102bd5cbce6b2ef32ecea\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\485483053f6102bd5cbce6b2ef32ecea\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.3.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\485483053f6102bd5cbce6b2ef32ecea\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
 uses-permission#android.permission.INTERNET
 ADDED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\2a4fe10e123e87b12953d5db6e4ab854\transformed\firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\4f19d3b5f86778b1ea18d2dbdb1faebf\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:14:5-67

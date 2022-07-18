@@ -3,17 +3,21 @@ package com.example.mygoalskotlin.UI.Main.ViewModel
 import android.annotation.SuppressLint
 import android.app.Application
 import android.util.Log
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mygoalskotlin.Model.User
-import com.example.mygoalskotlin.Model.repository.Repository
+import com.example.mygoalskotlin.Model.database.UserDatabase
+import com.example.mygoalskotlin.Model.repository.RepositoryFirebase
+import com.example.mygoalskotlin.Model.repository.RepositoryLocalDatabase
 import com.google.firebase.auth.FirebaseUser
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-class MainViewModel: ViewModel() {
-    private var repository: Repository? = null
+class MainViewModel(application: Application): ViewModel() {
+
+    private var repositoryFirebase: RepositoryFirebase? = null
+    private var repositoryLocal: RepositoryLocalDatabase? = null
+
     private var saveUserDetailsFirebase: Boolean? = null
     private var currentUserMutableLiveData: MutableLiveData<FirebaseUser>? = null
     private var userDetailsLiveData: MutableLiveData<User>? = null
@@ -21,19 +25,22 @@ class MainViewModel: ViewModel() {
     private var currentUser: FirebaseUser? = null
 
     init {
-        repository = Repository()
+        repositoryFirebase = RepositoryFirebase()
         this.currentUser = getCurrentUser()
         getUserDetailsLiveData()
         getCurrentUserLiveData()
         getErrorLiveData()
+
+        val dao = UserDatabase.getDatabase(application).getUserDao()
+        repositoryLocal = RepositoryLocalDatabase(dao)
     }
 
     private fun getCurrentUser(): FirebaseUser? {
-        return repository!!.getCurrentUser()
+        return repositoryFirebase!!.getCurrentUser()
     }
 
     fun getUserDetails(): User {
-        var userDetails = repository!!.getUserDetailsFromFirebase(currentUser?.uid!!)
+        var userDetails = repositoryFirebase!!.getUserDetailsFromFirebase(currentUser?.uid!!)
         if (userDetails != null){
             return userDetails
         }else{
@@ -45,7 +52,7 @@ class MainViewModel: ViewModel() {
 
     fun updateUser(){
 
-        repository!!.updateUserFirebase()
+        repositoryFirebase!!.updateUserFirebase()
     }
 
 
@@ -54,7 +61,7 @@ class MainViewModel: ViewModel() {
 
         user?.lastUpdate = getCurrentDate()
 
-        saveUserDetailsFirebase = repository!!.saveUserDetailsFirebase(user!!)
+        saveUserDetailsFirebase = repositoryFirebase!!.saveUserDetailsFirebase(user)
         if (saveUserDetailsFirebase as Boolean){
             detailsHasUpdated = "Success"
         }else{
@@ -63,18 +70,23 @@ class MainViewModel: ViewModel() {
         return detailsHasUpdated
     }
 
+    //Database
+    private fun insertIntoDatabase(user: User?){
+
+    }
+
     fun getUserDetailsLiveData(): MutableLiveData<User>? {
-        userDetailsLiveData = repository!!.getUserDetailsLiveData(currentUser?.uid!!)
+        userDetailsLiveData = repositoryFirebase!!.getUserDetailsLiveData(currentUser?.uid)
         return userDetailsLiveData
     }
 
     fun getCurrentUserLiveData(): MutableLiveData<FirebaseUser>? {
-        currentUserMutableLiveData = repository!!.getMutableLiveData()
+        currentUserMutableLiveData = repositoryFirebase!!.getMutableLiveData()
         return currentUserMutableLiveData
     }
 
     fun getErrorLiveData(): MutableLiveData<String>? {
-        errorMutableLiveData = repository!!.getErrorMutableLiveData()
+        errorMutableLiveData = repositoryFirebase!!.getErrorMutableLiveData()
         return errorMutableLiveData
     }
 

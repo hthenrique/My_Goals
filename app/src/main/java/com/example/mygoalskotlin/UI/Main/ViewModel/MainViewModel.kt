@@ -5,11 +5,13 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.mygoalskotlin.Model.User
 import com.example.mygoalskotlin.Model.database.UserDatabase
 import com.example.mygoalskotlin.Model.repository.RepositoryFirebase
 import com.example.mygoalskotlin.Model.repository.RepositoryLocalDatabase
 import com.google.firebase.auth.FirebaseUser
+import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -61,6 +63,7 @@ class MainViewModel(application: Application): ViewModel() {
 
         user?.lastUpdate = getCurrentDate()
 
+        insertIntoDatabase(user)
         saveUserDetailsFirebase = repositoryFirebase!!.saveUserDetailsFirebase(user)
         if (saveUserDetailsFirebase as Boolean){
             detailsHasUpdated = "Success"
@@ -72,9 +75,12 @@ class MainViewModel(application: Application): ViewModel() {
 
     //Database
     private fun insertIntoDatabase(user: User?){
-
+        viewModelScope.launch {
+            repositoryLocal?.userDao?.insert(user)
+        }
     }
 
+    //Firebase
     fun getUserDetailsLiveData(): MutableLiveData<User>? {
         userDetailsLiveData = repositoryFirebase!!.getUserDetailsLiveData(currentUser?.uid)
         return userDetailsLiveData

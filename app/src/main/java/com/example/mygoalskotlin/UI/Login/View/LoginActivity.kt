@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.mygoalskotlin.Model.LoginModel
 import com.example.mygoalskotlin.UI.Login.ViewModel.LoginViewModel
+import com.example.mygoalskotlin.UI.Login.ViewModel.LoginViewModelFactory
 import com.example.mygoalskotlin.UI.Main.View.MainActivity
 import com.example.mygoalskotlin.UI.Register.View.RegisterActivity
 import com.example.mygoalskotlin.Utils.MessagesConstants
@@ -33,7 +34,8 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        loginViewModel = ViewModelProvider(this,
+            LoginViewModelFactory(this.application)).get(LoginViewModel::class.java)
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -71,7 +73,6 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel?.getLoginMutableLiveData()?.observe(this, Observer {
             if (it != null){
                 loginUser()
-                saveUserInSharedPrefs()
             }
         })
         loginViewModel?.getErrorLiveData()?.observe(this, Observer {
@@ -79,22 +80,12 @@ class LoginActivity : AppCompatActivity() {
                 binding.loginProgressBar.visibility = View.GONE
                 binding.buttonLogin.isEnabled = true
                 Toast.makeText(this, it.toString(), Toast.LENGTH_LONG).show()
-                registerUser()
+
+                if(it.toString() != MessagesConstants.NETWORK_ERROR){
+                    registerUser()
+                }
             }
         })
-
-    }
-
-    @SuppressLint("CommitPrefEdits")
-    private fun saveUserInSharedPrefs() {
-
-        val sharedPreferences: SharedPreferences = getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
-        val prefsEditor: SharedPreferences.Editor = sharedPreferences.edit()
-        prefsEditor.putBoolean("isUserLogin", true)
-        prefsEditor.putString("email", loginModel.email)
-        prefsEditor.putString("password", loginModel.password)
-        prefsEditor.apply()
-        prefsEditor.commit()
 
     }
 

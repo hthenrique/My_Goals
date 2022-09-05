@@ -6,4 +6,5 @@ object MessagesConstants {
     const val INVALID_EMAIL = "Email inválido"
     const val NON_EXISTENT_USER = "Usuário Inexistente"
     const val NO_MATCH_PASSWORD = "As senhas são diferentes"
+    const val NETWORK_ERROR = "A network error (such as timeout, interrupted connection or unreachable host) has occurred."
 }

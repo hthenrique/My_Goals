@@ -128,6 +128,7 @@ class MainActivity : AppCompatActivity() {
     private fun logoutUser() {
         Firebase.auth.signOut()
         deleteUserFromSharedPrefs()
+        mainViewModel.deleteUser(user)
         backToLogin()
     }
 

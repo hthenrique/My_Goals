@@ -7,6 +7,8 @@ import com.example.mygoalskotlin.Model.LoginModel
 import com.example.mygoalskotlin.Model.RegisterModel
 import com.example.mygoalskotlin.Model.User
 import com.example.mygoalskotlin.Utils.CollectionsConstants.USERS
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -50,8 +52,8 @@ class RepositoryFirebase() {
             }
     }
 
-    fun loginExistentUser(loginModel: LoginModel){
-        firebaseAuth?.signInWithEmailAndPassword(loginModel.email.toString(), loginModel.password.toString())
+    fun loginExistentUser(loginModel: LoginModel): Task<AuthResult>? {
+        return firebaseAuth?.signInWithEmailAndPassword(loginModel.email.toString(), loginModel.password.toString())
             ?.addOnCompleteListener {
                 if (it.isSuccessful){
                     userMutableLiveData?.value = firebaseAuth!!.currentUser
@@ -76,7 +78,7 @@ class RepositoryFirebase() {
         return savingDetails
     }
 
-    fun getUserDetailsFromFirebase(uid: String?): User{
+    fun getUserDetailsFromFirebase(uid: String?): User?{
 
         val docRef: DocumentReference = FirebaseFirestore.getInstance().collection(USERS).document(uid!!)
         docRef.get().addOnCompleteListener {

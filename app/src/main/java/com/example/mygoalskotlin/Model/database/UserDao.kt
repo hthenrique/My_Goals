@@ -14,6 +14,9 @@ interface UserDao {
     @Update
     suspend fun updateUser(user: User?)
 
+    @Delete
+    suspend fun deleteUser(user: User?)
+
     @Query("SELECT * FROM user WHERE :uid")
     fun getUser(uid: String?): Array<User>?
 

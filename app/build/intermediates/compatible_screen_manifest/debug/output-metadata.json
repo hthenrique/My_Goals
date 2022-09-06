@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.example.mygoalskotlin",
+  "applicationId": "br.hthenrique.mygoalskotlin",
   "variantName": "debug",
   "elements": []
 }

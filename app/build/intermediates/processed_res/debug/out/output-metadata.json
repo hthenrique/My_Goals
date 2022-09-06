@@ -4,7 +4,7 @@
     "type": "PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "com.example.mygoalskotlin",
+  "applicationId": "br.hthenrique.mygoalskotlin",
   "variantName": "debug",
   "elements": [
     {

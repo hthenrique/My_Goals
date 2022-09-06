@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mygoalskotlin">
+    package="br.hthenrique.mygoalskotlin">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGoalsKotlin">
         <activity
-            android:name="com.example.mygoalskotlin.UI.Splash.View.SplashActivity"
+            android:name="br.hthenrique.mygoalskotlin.UI.Splash.View.SplashActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,11 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.mygoalskotlin.UI.Register.View.RegisterActivity"
+        <activity android:name="br.hthenrique.mygoalskotlin.UI.Register.View.RegisterActivity"
             android:theme="@style/Theme.MyGoalsKotlinNoActionBar"/>
-        <activity android:name="com.example.mygoalskotlin.UI.Login.View.LoginActivity"
+        <activity android:name="br.hthenrique.mygoalskotlin.UI.Login.View.LoginActivity"
             android:theme="@style/Theme.MyGoalsKotlinNoActionBar"/>
-        <activity android:name="com.example.mygoalskotlin.UI.Main.View.MainActivity" />
+        <activity android:name="br.hthenrique.mygoalskotlin.UI.Main.View.MainActivity" />
     </application>
 
 </manifest>

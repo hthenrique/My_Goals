@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.example.mygoalskotlin"
+3    package="br.hthenrique.mygoalskotlin"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -46,8 +46,8 @@
 26-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:11:9-51
 27        <activity
 27-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:12:9-20:20
-28            android:name="com.example.mygoalskotlin.UI.Splash.View.SplashActivity"
-28-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:13:13-83
+28            android:name="br.hthenrique.mygoalskotlin.UI.Splash.View.SplashActivity"
+28-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:13:13-85
 29            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
 29-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:14:13-72
 30            <intent-filter>
@@ -63,19 +63,19 @@
 35        </activity>
 36        <activity
 36-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:21:9-22:68
-37            android:name="com.example.mygoalskotlin.UI.Register.View.RegisterActivity"
-37-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:21:19-93
+37            android:name="br.hthenrique.mygoalskotlin.UI.Register.View.RegisterActivity"
+37-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:21:19-95
 38            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
 38-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:22:13-66
 39        <activity
 39-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:23:9-24:68
-40            android:name="com.example.mygoalskotlin.UI.Login.View.LoginActivity"
-40-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:23:19-87
+40            android:name="br.hthenrique.mygoalskotlin.UI.Login.View.LoginActivity"
+40-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:23:19-89
 41            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
 41-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:24:13-66
-42        <activity android:name="com.example.mygoalskotlin.UI.Main.View.MainActivity" />
-42-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:25:9-88
-42-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:25:19-85
+42        <activity android:name="br.hthenrique.mygoalskotlin.UI.Main.View.MainActivity" />
+42-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:25:9-90
+42-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:25:19-87
 43
 44        <service
 44-->[com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\e161faad56d422d5d42ec819680d039e\transformed\firebase-firestore-ktx-24.1.2\AndroidManifest.xml:12:9-18:19
@@ -238,7 +238,7 @@
 126-->[com.google.firebase:firebase-common:20.1.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\97f3c77fbf345ad0c172c0d8a03aeeed\transformed\firebase-common-20.1.1\AndroidManifest.xml:26:9-31:39
 127            android:name="com.google.firebase.provider.FirebaseInitProvider"
 127-->[com.google.firebase:firebase-common:20.1.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\97f3c77fbf345ad0c172c0d8a03aeeed\transformed\firebase-common-20.1.1\AndroidManifest.xml:27:13-77
-128            android:authorities="com.example.mygoalskotlin.firebaseinitprovider"
+128            android:authorities="br.hthenrique.mygoalskotlin.firebaseinitprovider"
 128-->[com.google.firebase:firebase-common:20.1.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\97f3c77fbf345ad0c172c0d8a03aeeed\transformed\firebase-common-20.1.1\AndroidManifest.xml:28:13-72
 129            android:directBootAware="true"
 129-->[com.google.firebase:firebase-common:20.1.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\97f3c77fbf345ad0c172c0d8a03aeeed\transformed\firebase-common-20.1.1\AndroidManifest.xml:29:13-43
@@ -296,7 +296,7 @@
 158-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\db41c9ea57ee603101da3ceb68ea3ea8\transformed\lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
 159            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
 159-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\db41c9ea57ee603101da3ceb68ea3ea8\transformed\lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-160            android:authorities="com.example.mygoalskotlin.lifecycle-process"
+160            android:authorities="br.hthenrique.mygoalskotlin.lifecycle-process"
 160-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\db41c9ea57ee603101da3ceb68ea3ea8\transformed\lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
 161            android:exported="false"
 161-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\db41c9ea57ee603101da3ceb68ea3ea8\transformed\lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37

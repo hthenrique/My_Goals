@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:625359302288:android:6388ae7885452b25e0b215",
+        "mobilesdk_app_id": "1:625359302288:android:f5230387b87538bde0b215",
         "android_client_info": {
-          "package_name": "com.example.mygoalskotlin"
+          "package_name": "br.hthenrique.mygoalskotlin"
         }
       },
       "oauth_client": [

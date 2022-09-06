@@ -24,7 +24,7 @@ class MainViewModel(val application: Application): ViewModel() {
 
     private var saveUserDetailsFirebase: Boolean? = null
     private var currentUserMutableLiveData: MutableLiveData<FirebaseUser>? = null
-    private var userDetailsLiveData: MutableLiveData<br.hthenrique.mygoalskotlin.Model.User>? = null
+    private var userDetailsLiveData: MutableLiveData<User>? = null
     private var errorMutableLiveData: MutableLiveData<String>? = null
     private var currentUser: FirebaseUser? = null
     private var currentUid: String? = null
@@ -37,7 +37,7 @@ class MainViewModel(val application: Application): ViewModel() {
         getCurrentUserLiveData()
         getErrorLiveData()
 
-        val dao = br.hthenrique.mygoalskotlin.Model.database.UserDatabase.getDatabase(application).getUserDao()
+        val dao = UserDatabase.getDatabase(application).getUserDao()
         repositoryLocal = RepositoryLocalDatabase(dao)
     }
 
@@ -45,12 +45,12 @@ class MainViewModel(val application: Application): ViewModel() {
         return repositoryFirebase!!.getCurrentUser()
     }
 
-    fun getUserDetails(): br.hthenrique.mygoalskotlin.Model.User {
+    fun getUserDetails(): User {
         var userDetails = repositoryFirebase!!.getUserDetailsFromFirebase(currentUser?.uid!!)
         if (userDetails != null){
             return userDetails
         }else{
-            userDetails = br.hthenrique.mygoalskotlin.Model.User()
+            userDetails = User()
 
         }
         return userDetails
@@ -62,7 +62,7 @@ class MainViewModel(val application: Application): ViewModel() {
     }
 
 
-    fun saveDetails(user: br.hthenrique.mygoalskotlin.Model.User?): String{
+    fun saveDetails(user: User?): String{
         val detailsHasUpdated: String
 
         user?.lastUpdate = getCurrentDate()
@@ -77,18 +77,18 @@ class MainViewModel(val application: Application): ViewModel() {
         return detailsHasUpdated
     }
 
-    fun deleteUser(user: br.hthenrique.mygoalskotlin.Model.User?){
+    fun deleteUser(user: User?){
         deleteIntoDatabase(user)
     }
 
     //Database
-    private fun insertIntoDatabase(user: br.hthenrique.mygoalskotlin.Model.User?){
+    private fun insertIntoDatabase(user: User?){
         viewModelScope.launch {
             repositoryLocal?.insertUserDatabase(user)
         }
     }
 
-    private fun deleteIntoDatabase(user: br.hthenrique.mygoalskotlin.Model.User?){
+    private fun deleteIntoDatabase(user: User?){
         viewModelScope.launch {
             repositoryLocal?.deleteUserDatabase(user)
         }
@@ -99,7 +99,7 @@ class MainViewModel(val application: Application): ViewModel() {
     }
 
     //Firebase
-    fun getUserDetailsLiveData(): MutableLiveData<br.hthenrique.mygoalskotlin.Model.User>? {
+    fun getUserDetailsLiveData(): MutableLiveData<User>? {
         userDetailsLiveData = repositoryFirebase!!.getUserDetailsLiveData(currentUser?.uid)
         return userDetailsLiveData
     }

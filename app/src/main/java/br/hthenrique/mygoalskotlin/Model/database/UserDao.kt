@@ -9,15 +9,15 @@ import br.hthenrique.mygoalskotlin.Model.User
 interface UserDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(user: br.hthenrique.mygoalskotlin.Model.User?)
+    suspend fun insert(user: User?)
 
     @Update
-    suspend fun updateUser(user: br.hthenrique.mygoalskotlin.Model.User?)
+    suspend fun updateUser(user: User?)
 
     @Delete
-    suspend fun deleteUser(user: br.hthenrique.mygoalskotlin.Model.User?)
+    suspend fun deleteUser(user: User?)
 
     @Query("SELECT * FROM user WHERE :uid")
-    fun getUser(uid: String?): Array<br.hthenrique.mygoalskotlin.Model.User>?
+    fun getUser(uid: String?): Array<User>?
 
 }

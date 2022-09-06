@@ -7,22 +7,22 @@ import androidx.room.RoomDatabase
 import br.hthenrique.mygoalskotlin.Model.User
 
 @Database(
-    entities = [br.hthenrique.mygoalskotlin.Model.User::class],
+    entities = [User::class],
     version = 1
 )
 abstract class UserDatabase: RoomDatabase() {
-    abstract fun getUserDao(): br.hthenrique.mygoalskotlin.Model.database.UserDao
+    abstract fun getUserDao(): UserDao
 
     companion object {
         @Volatile
-        private var INSTANCE: br.hthenrique.mygoalskotlin.Model.database.UserDatabase? = null
+        private var INSTANCE: UserDatabase? = null
         private const val DB_NAME = "user_database"
 
-        fun getDatabase(context: Context): br.hthenrique.mygoalskotlin.Model.database.UserDatabase {
+        fun getDatabase(context: Context): UserDatabase {
             return Room.databaseBuilder(
                 context.applicationContext,
-                br.hthenrique.mygoalskotlin.Model.database.UserDatabase::class.java,
-                br.hthenrique.mygoalskotlin.Model.database.UserDatabase.Companion.DB_NAME
+                UserDatabase::class.java,
+                UserDatabase.Companion.DB_NAME
             ).build()
         }
     }

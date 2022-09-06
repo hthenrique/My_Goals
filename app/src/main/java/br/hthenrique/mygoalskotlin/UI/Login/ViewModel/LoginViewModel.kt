@@ -23,7 +23,7 @@ class LoginViewModel(val application: Application) : ViewModel() {
         errorMutableLiveData = repositoryFirebase!!.getErrorMutableLiveData()
     }
 
-    fun login(loginModel: br.hthenrique.mygoalskotlin.Model.LoginModel){
+    fun login(loginModel: LoginModel){
         val loginUser = repositoryFirebase?.loginExistentUser(loginModel)
         loginUser?.addOnSuccessListener {
             saveUserInSharedPrefs(it.user?.uid)

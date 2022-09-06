@@ -21,10 +21,10 @@ class RepositoryFirebase() {
     private var application: Application? = null
     private var firebaseAuth: FirebaseAuth? = null
     private var userMutableLiveData: MutableLiveData<FirebaseUser>? = null
-    private var userDetailsLiveData: MutableLiveData<br.hthenrique.mygoalskotlin.Model.User>? = null
+    private var userDetailsLiveData: MutableLiveData<User>? = null
     private var errorMutableLiveData: MutableLiveData<String>? = null
 
-    private val user: br.hthenrique.mygoalskotlin.Model.User by lazy { br.hthenrique.mygoalskotlin.Model.User() }
+    private val user: User by lazy { User() }
 
     init {
         getCurrentUser()
@@ -34,7 +34,7 @@ class RepositoryFirebase() {
         errorMutableLiveData = MutableLiveData()
     }
 
-    fun registerNewUser(registerModel: br.hthenrique.mygoalskotlin.Model.RegisterModel){
+    fun registerNewUser(registerModel: RegisterModel){
         firebaseAuth?.createUserWithEmailAndPassword(
             registerModel.email.toString(),
             registerModel.password.toString()
@@ -52,7 +52,7 @@ class RepositoryFirebase() {
             }
     }
 
-    fun loginExistentUser(loginModel: br.hthenrique.mygoalskotlin.Model.LoginModel): Task<AuthResult>? {
+    fun loginExistentUser(loginModel: LoginModel): Task<AuthResult>? {
         return firebaseAuth?.signInWithEmailAndPassword(loginModel.email.toString(), loginModel.password.toString())
             ?.addOnCompleteListener {
                 if (it.isSuccessful){
@@ -63,7 +63,7 @@ class RepositoryFirebase() {
             }
     }
 
-    fun saveUserDetailsFirebase(user: br.hthenrique.mygoalskotlin.Model.User?): Boolean {
+    fun saveUserDetailsFirebase(user: User?): Boolean {
         var savingDetails: Boolean = false
         FirebaseFirestore.getInstance().collection("users").document(user?.uid.toString())
             .set(user!!)
@@ -78,7 +78,7 @@ class RepositoryFirebase() {
         return savingDetails
     }
 
-    fun getUserDetailsFromFirebase(uid: String?): br.hthenrique.mygoalskotlin.Model.User?{
+    fun getUserDetailsFromFirebase(uid: String?): User?{
 
         val docRef: DocumentReference = FirebaseFirestore.getInstance().collection(USERS).document(uid!!)
         docRef.get().addOnCompleteListener {
@@ -117,7 +117,7 @@ class RepositoryFirebase() {
         return Firebase.auth.currentUser
     }
 
-    fun getUserDetailsLiveData(uid: String?): MutableLiveData<br.hthenrique.mygoalskotlin.Model.User>? {
+    fun getUserDetailsLiveData(uid: String?): MutableLiveData<User>? {
         getUserDetailsFromFirebase(uid)
         return userDetailsLiveData
     }

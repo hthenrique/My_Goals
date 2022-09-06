@@ -1,5 +1,5 @@
 package br.hthenrique.mygoalskotlin.Model
 
-class LoginModel: br.hthenrique.mygoalskotlin.Model.User() {
+class LoginModel: User() {
     var password: String? = null
 }

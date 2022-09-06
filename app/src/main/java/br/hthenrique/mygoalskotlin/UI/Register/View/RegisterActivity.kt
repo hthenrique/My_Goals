@@ -22,7 +22,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
 
     private val validator: Validator by lazy { Validator() }
-    private val registerModel: br.hthenrique.mygoalskotlin.Model.RegisterModel by lazy { br.hthenrique.mygoalskotlin.Model.RegisterModel() }
+    private val registerModel: RegisterModel by lazy { RegisterModel() }
 
     private lateinit var registerViewModel: RegisterViewModel
 

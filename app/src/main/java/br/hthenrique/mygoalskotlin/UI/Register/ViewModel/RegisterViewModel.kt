@@ -20,14 +20,14 @@ class RegisterViewModel : ViewModel() {
     }
 
     fun saveUserDetails() {
-        var user: br.hthenrique.mygoalskotlin.Model.User = br.hthenrique.mygoalskotlin.Model.User()
+        var user: User = User()
         user.uid = mutableLiveData?.value?.uid!!
         user.email = mutableLiveData?.value?.email
         repositoryFirebase!!.saveUserDetailsFirebase(user)
     }
 
 
-    fun signup(registerModel: br.hthenrique.mygoalskotlin.Model.RegisterModel){
+    fun signup(registerModel: RegisterModel){
         repositoryFirebase?.registerNewUser(registerModel)
     }
 

@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import br.hthenrique.mygoalskotlin.Model.LoginModel
 import br.hthenrique.mygoalskotlin.UI.Login.ViewModel.LoginViewModel
 import br.hthenrique.mygoalskotlin.UI.Login.ViewModel.LoginViewModelFactory
 import br.hthenrique.mygoalskotlin.UI.Main.View.MainActivity
@@ -22,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
     private var mockEmail = "henrique@gmail.com"
     private var mockpassword = "Henrique#3"
 
-    private val loginModel: br.hthenrique.mygoalskotlin.Model.LoginModel by lazy { br.hthenrique.mygoalskotlin.Model.LoginModel() }
+    private val loginModel: LoginModel by lazy { LoginModel() }
     private val validator: Validator by lazy { Validator() }
     private var loginViewModel: LoginViewModel? = null
 

@@ -28,7 +28,7 @@ import com.google.firebase.ktx.Firebase
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var mainViewModel: MainViewModel
-    private val user: br.hthenrique.mygoalskotlin.Model.User by lazy { br.hthenrique.mygoalskotlin.Model.User() }
+    private val user: User by lazy { User() }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -133,7 +133,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @SuppressLint("SetTextI18n")
-    private fun showUserInfo(user: br.hthenrique.mygoalskotlin.Model.User) {
+    private fun showUserInfo(user: User) {
         if (user.name.equals(null) || user.name.equals("null")){
             binding.welcomeUser.text = "Welcome! "
         }

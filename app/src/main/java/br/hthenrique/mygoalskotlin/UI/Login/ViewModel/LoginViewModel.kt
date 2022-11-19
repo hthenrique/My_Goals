@@ -28,10 +28,6 @@ class LoginViewModel(val application: Application) : ViewModel() {
         loginUser?.addOnSuccessListener {
             saveUserInSharedPrefs(it.user?.uid)
         }
-        if (loginUser?.isSuccessful == true) {
-
-        }
-        Resource.Error("Login Failed", null)
     }
 
     @SuppressLint("CommitPrefEdits")

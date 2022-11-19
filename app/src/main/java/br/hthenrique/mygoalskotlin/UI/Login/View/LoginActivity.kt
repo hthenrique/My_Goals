@@ -13,6 +13,10 @@ import br.hthenrique.mygoalskotlin.UI.Login.ViewModel.LoginViewModelFactory
 import br.hthenrique.mygoalskotlin.UI.Main.View.MainActivity
 import br.hthenrique.mygoalskotlin.UI.Register.View.RegisterActivity
 import br.hthenrique.mygoalskotlin.Utils.MessagesConstants
+import br.hthenrique.mygoalskotlin.Utils.MessagesConstants.INVALID_PARAMETERS
+import br.hthenrique.mygoalskotlin.Utils.MessagesConstants.NETWORK_ERROR
+import br.hthenrique.mygoalskotlin.Utils.MessagesConstants.NON_EXISTENT_USER
+import br.hthenrique.mygoalskotlin.Utils.MessagesConstants.PASSWORD_INVALID_OR_DOES_EXIST
 import br.hthenrique.mygoalskotlin.Utils.Validator
 import br.hthenrique.mygoalskotlin.databinding.ActivityLoginBinding
 
@@ -76,10 +80,16 @@ class LoginActivity : AppCompatActivity() {
             if (it != null){
                 binding.loginProgressBar.visibility = View.GONE
                 binding.buttonLogin.isEnabled = true
-                Toast.makeText(this, it.toString(), Toast.LENGTH_LONG).show()
 
-                if(it.toString() != MessagesConstants.NETWORK_ERROR){
-                    registerUser()
+                when(it.toString()){
+                    NON_EXISTENT_USER -> {
+                        Toast.makeText(this, it.toString(), Toast.LENGTH_LONG).show()
+                        registerUser()
+                    }
+                    PASSWORD_INVALID_OR_DOES_EXIST -> {
+                        Toast.makeText(this, INVALID_PARAMETERS, Toast.LENGTH_LONG).show()
+                    }
+                    NETWORK_ERROR -> Toast.makeText(this, it.toString(), Toast.LENGTH_LONG).show()
                 }
             }
         })

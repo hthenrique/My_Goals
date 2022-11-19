@@ -25,7 +25,7 @@ internal class LoginViewModelTest{
         loginModel.password = "test#123"
     }
 
-    @Test
+    /*@Test
     fun loginTestSuccess(){
         loginViewModel.login(loginModel)
     }
@@ -34,7 +34,7 @@ internal class LoginViewModelTest{
     fun getLoginMutableLiveDataTestSuccess(){
         loginViewModel.login(getLoginModelMock())
         Assert.assertNotNull(loginViewModel.getLoginMutableLiveData())
-    }
+    }*/
 
     fun getLoginModelMock(): LoginModel{
         val loginModel = LoginModel()

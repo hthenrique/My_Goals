@@ -8,6 +8,10 @@
         "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\layout\\activity_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
         "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\layout\\activity_login.xml"
     },

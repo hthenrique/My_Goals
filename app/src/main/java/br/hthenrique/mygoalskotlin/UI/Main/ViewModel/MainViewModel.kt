@@ -13,6 +13,8 @@ import br.hthenrique.mygoalskotlin.Model.database.UserDatabase
 import br.hthenrique.mygoalskotlin.Model.repository.RepositoryFirebase
 import br.hthenrique.mygoalskotlin.Model.repository.RepositoryLocalDatabase
 import com.google.firebase.auth.FirebaseUser
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -83,13 +85,13 @@ class MainViewModel(val application: Application): ViewModel() {
 
     //Database
     private fun insertIntoDatabase(user: User?){
-        viewModelScope.launch {
+        CoroutineScope(Dispatchers.IO).launch {
             repositoryLocal?.insertUserDatabase(user)
         }
     }
 
     private fun deleteIntoDatabase(user: User?){
-        viewModelScope.launch {
+        CoroutineScope(Dispatchers.IO).launch {
             repositoryLocal?.deleteUserDatabase(user)
         }
     }

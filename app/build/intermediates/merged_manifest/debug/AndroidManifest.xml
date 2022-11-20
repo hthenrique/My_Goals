@@ -25,6 +25,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyGoalsKotlin" >
         <activity
+            android:name="br.hthenrique.mygoalskotlin.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name="br.hthenrique.mygoalskotlin.UI.Splash.View.SplashActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
             <intent-filter>

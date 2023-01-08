@@ -47,23 +47,6 @@ class MainViewModel(val application: Application): ViewModel() {
         return repositoryFirebase!!.getCurrentUser()
     }
 
-    fun getUserDetails(): User {
-        var userDetails = repositoryFirebase!!.getUserDetailsFromFirebase(currentUser?.uid!!)
-        if (userDetails != null){
-            return userDetails
-        }else{
-            userDetails = User()
-
-        }
-        return userDetails
-    }
-
-    fun updateUser(){
-
-        repositoryFirebase!!.updateUserFirebase()
-    }
-
-
     fun saveDetails(user: User?): String{
         val detailsHasUpdated: String
 

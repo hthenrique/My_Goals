@@ -2,6 +2,8 @@ package br.hthenrique.mygoalskotlin.UI.Register.View
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +13,7 @@ import androidx.lifecycle.ViewModelProviders
 import br.hthenrique.mygoalskotlin.Utils.Validator
 import br.hthenrique.mygoalskotlin.databinding.ActivityRegisterBinding
 import br.hthenrique.mygoalskotlin.Model.RegisterModel
+import br.hthenrique.mygoalskotlin.R
 import br.hthenrique.mygoalskotlin.UI.Register.ViewModel.RegisterViewModel
 import br.hthenrique.mygoalskotlin.Utils.MessagesConstants.INVALID_EMAIL
 import br.hthenrique.mygoalskotlin.Utils.MessagesConstants.INVALID_PASSWORD
@@ -28,6 +31,11 @@ class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.apply {
+            title = "Create your profile"
+            setDisplayHomeAsUpEnabled(true)
+        }
+
         registerViewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
 
         binding = ActivityRegisterBinding.inflate(layoutInflater)
@@ -39,19 +47,34 @@ class RegisterActivity : AppCompatActivity() {
             binding.editTextRegisterEmail.setText(registerModel.email)
         }
 
-        setupButtonRegister()
     }
 
-    private fun setupButtonRegister() {
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.register_done, menu)
+        return true
+    }
 
-        binding.buttonCreateUser.setOnClickListener {
-            registerModel.name = binding.editTextRegisterName.text.toString().trim()
-            registerModel.email = binding.editTextRegisterEmail.text.toString().trim()
-            registerModel.password = binding.editTextPassword.text.toString().trim()
-            registerModel.confirmPassword = binding.editTextConfirmPassword.text.toString().trim()
-
-            isValidUser(isValidUserToRegister())
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                this.finish()
+            }
+            R.id.action_menu_done ->{
+                saveUser()
+            }
         }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun saveUser(){
+        registerModel.name = binding.editTextRegisterName.text.toString().trim()
+        registerModel.email = binding.editTextRegisterEmail.text.toString().trim()
+        registerModel.password = binding.editTextPassword.text.toString().trim()
+        registerModel.confirmPassword = binding.editTextConfirmPassword.text.toString().trim()
+
+        isValidUser(isValidUserToRegister())
     }
 
     private fun isValidUser(valid: Boolean){
@@ -106,4 +129,5 @@ class RegisterActivity : AppCompatActivity() {
 
         return isValidUser
     }
+
 }

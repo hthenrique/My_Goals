@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-30:12
 MERGED from [androidx.databinding:databinding-adapters:7.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\f7c2a7de5aa038e8df3663fdd37fcb00\transformed\databinding-adapters-7.1.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-ktx:7.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\d77cce2777a2f1a6a3f0172125b7dae1\transformed\databinding-ktx-7.1.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:7.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\e30b3297abcbabdd7fef0e33e7bb9b2b\transformed\databinding-runtime-7.1.2\AndroidManifest.xml:17:1-24:12
@@ -32,6 +32,7 @@ MERGED from [com.google.firebase:firebase-core:20.0.2] C:\Users\h.da.silva.teixe
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\fc70f2841508913903465b8afc82264d\transformed\rxandroid-2.1.1\AndroidManifest.xml:15:1-20:12
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\f7dfc7292d45456af6d88bec284e97c1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:2:1-26:12
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ab1be04a05d2bf31ea19399461d13d36\transformed\grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\a9237994dda21e2d6e1bc504a905d70c\transformed\circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-analytics:20.0.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3d0da2c03fc9a883059dc08c3073130d\transformed\firebase-analytics-20.0.2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\b13f43c13d0286142d5ce06fbfa3633c\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\dbbf26c41f97acb508c1f809bf583f75\transformed\firebase-appcheck-interop-16.0.0\AndroidManifest.xml:15:1-26:12
@@ -96,25 +97,25 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\h.da.silva.teixe
 MERGED from [androidx.print:print:1.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\a0cf89284179c6546d1734cfc4e3d824\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\63411e43770dfc0f5607bf8843f8571e\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\0d7fbd20468a5751b803ed3ba54452d7\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:5:5-31:19
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:5:5-28:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\448fe43da53bf830337d04ac82a97f66\transformed\firebase-firestore-ktx-24.1.2\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\448fe43da53bf830337d04ac82a97f66\transformed\firebase-firestore-ktx-24.1.2\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:19.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\1935a1e5850fcbb3da7fcf55700eed92\transformed\firebase-analytics-ktx-19.0.0\AndroidManifest.xml:7:5-15:19
@@ -137,6 +138,8 @@ MERGED from [com.google.firebase:firebase-core:20.0.2] C:\Users\h.da.silva.teixe
 MERGED from [com.google.firebase:firebase-core:20.0.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ee5a4b3a2a514115b333d78a33cd1431\transformed\firebase-core-20.0.2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\f7dfc7292d45456af6d88bec284e97c1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\f7dfc7292d45456af6d88bec284e97c1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:16:5-24:19
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\a9237994dda21e2d6e1bc504a905d70c\transformed\circleimageview-3.1.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\a9237994dda21e2d6e1bc504a905d70c\transformed\circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-analytics:20.0.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3d0da2c03fc9a883059dc08c3073130d\transformed\firebase-analytics-20.0.2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:20.0.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3d0da2c03fc9a883059dc08c3073130d\transformed\firebase-analytics-20.0.2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\b13f43c13d0286142d5ce06fbfa3633c\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
@@ -191,44 +194,40 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\h.
 		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:11:9-51
-activity#br.hthenrique.mygoalskotlin.ProfileActivity
-ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:12:9-14:40
-	android:exported
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:14:13-37
-	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:13:13-44
 activity#br.hthenrique.mygoalskotlin.UI.Splash.View.SplashActivity
-ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:15:9-23:20
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:12:9-20:20
 	android:theme
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:17:13-72
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:14:13-66
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:16:13-85
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:13:13-85
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:18:27-74
 activity#br.hthenrique.mygoalskotlin.UI.Register.View.RegisterActivity
-ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:24:9-26:69
-	android:theme
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:26:13-66
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:21:9-22:92
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:25:13-89
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:22:13-89
 activity#br.hthenrique.mygoalskotlin.UI.Login.View.LoginActivity
-ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:27:9-29:69
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:23:9-25:69
 	android:theme
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:29:13-66
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:28:13-83
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:24:13-83
 activity#br.hthenrique.mygoalskotlin.UI.Main.View.MainActivity
-ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:30:9-90
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:26:9-90
 	android:name
-		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:30:19-87
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:26:19-87
+activity#br.hthenrique.mygoalskotlin.UI.Profile.View.ProfileActivity
+ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:27:9-96
+	android:name
+		ADDED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:27:19-93
 uses-sdk
 INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
@@ -289,6 +288,8 @@ MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\h.da.silva.
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\f7dfc7292d45456af6d88bec284e97c1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ab1be04a05d2bf31ea19399461d13d36\transformed\grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\ab1be04a05d2bf31ea19399461d13d36\transformed\grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\a9237994dda21e2d6e1bc504a905d70c\transformed\circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\a9237994dda21e2d6e1bc504a905d70c\transformed\circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-analytics:20.0.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3d0da2c03fc9a883059dc08c3073130d\transformed\firebase-analytics-20.0.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:20.0.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\3d0da2c03fc9a883059dc08c3073130d\transformed\firebase-analytics-20.0.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\b13f43c13d0286142d5ce06fbfa3633c\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44

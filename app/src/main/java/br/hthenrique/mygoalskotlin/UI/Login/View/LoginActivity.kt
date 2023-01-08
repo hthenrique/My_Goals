@@ -9,9 +9,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import br.hthenrique.mygoalskotlin.Model.LoginModel
 import br.hthenrique.mygoalskotlin.UI.Login.ViewModel.LoginViewModel
-import br.hthenrique.mygoalskotlin.UI.Login.ViewModel.LoginViewModelFactory
 import br.hthenrique.mygoalskotlin.UI.Main.View.MainActivity
 import br.hthenrique.mygoalskotlin.UI.Register.View.RegisterActivity
+import br.hthenrique.mygoalskotlin.UI.ViewModelFactory.ViewModelFactory
 import br.hthenrique.mygoalskotlin.Utils.MessagesConstants
 import br.hthenrique.mygoalskotlin.Utils.MessagesConstants.INVALID_PARAMETERS
 import br.hthenrique.mygoalskotlin.Utils.MessagesConstants.NETWORK_ERROR
@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         loginViewModel = ViewModelProvider(this,
-            LoginViewModelFactory(this.application)).get(LoginViewModel::class.java)
+            ViewModelFactory(this.application)).get(LoginViewModel::class.java)
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -56,6 +56,7 @@ class LoginActivity : AppCompatActivity() {
             if (validateUserToLogin()){
                 binding.loginProgressBar.visibility = View.VISIBLE
                 binding.buttonLogin.isEnabled = false
+                binding.buttonRegister.isEnabled = false
                 firebaseRequest()
             }else{
                 Toast.makeText(this, MessagesConstants.INVALID_PARAMETERS, Toast.LENGTH_LONG).show()
@@ -80,6 +81,7 @@ class LoginActivity : AppCompatActivity() {
             if (it != null){
                 binding.loginProgressBar.visibility = View.GONE
                 binding.buttonLogin.isEnabled = true
+                binding.buttonRegister.isEnabled = true
 
                 when(it.toString()){
                     NON_EXISTENT_USER -> {

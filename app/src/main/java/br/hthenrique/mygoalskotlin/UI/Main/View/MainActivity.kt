@@ -5,23 +5,20 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.os.Handler
-import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import br.hthenrique.mygoalskotlin.Model.User
 import br.hthenrique.mygoalskotlin.R
 import br.hthenrique.mygoalskotlin.UI.Login.View.LoginActivity
 import br.hthenrique.mygoalskotlin.UI.Main.ViewModel.MainViewModel
-import br.hthenrique.mygoalskotlin.UI.Main.ViewModel.MainViewModelFactory
+import br.hthenrique.mygoalskotlin.UI.Profile.View.ProfileActivity
+import br.hthenrique.mygoalskotlin.UI.ViewModelFactory.ViewModelFactory
 import br.hthenrique.mygoalskotlin.databinding.ActivityMainBinding
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -38,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val viewModelFactory = MainViewModelFactory(this.application)
+        val viewModelFactory = ViewModelFactory(this.application)
         mainViewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
         binding.loadingLayout.visibility = View.VISIBLE
         mainViewModel.getUserDetailsLiveData()?.observe(this, Observer {
@@ -102,18 +99,15 @@ class MainActivity : AppCompatActivity() {
         return variable
     }
 
-    private fun showOrHideEditPosition() {
-        if (binding.editPositionNameLayout.visibility == View.VISIBLE){
-            binding.editPositionNameLayout.visibility = View.GONE
-        }else{
-            binding.editPositionNameLayout.visibility = View.VISIBLE
-        }
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
             R.id.logoutUser -> {
                 logoutUser()
+            }
+            R.id.userProfile -> {
+                val profileIntent = Intent(this, ProfileActivity::class.java)
+                startActivity(profileIntent)
+                this.finish()
             }
         }
         return super.onOptionsItemSelected(item)
@@ -162,7 +156,16 @@ class MainActivity : AppCompatActivity() {
     private fun savePositionValue() {
         user.position = binding.editTextPosition.text.toString()
         binding.userPositionValue.text = user.position
+        binding.editTextPosition.setText(user.position.toString())
         saveDetails()
         showOrHideEditPosition()
+    }
+
+    private fun showOrHideEditPosition() {
+        if (binding.editPositionNameLayout.visibility == View.VISIBLE){
+            binding.editPositionNameLayout.visibility = View.GONE
+        }else{
+            binding.editPositionNameLayout.visibility = View.VISIBLE
+        }
     }
 }

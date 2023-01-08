@@ -10,11 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGoalsKotlin">
         <activity
-            android:name=".ProfileActivity"
-            android:exported="false" />
-        <activity
             android:name="br.hthenrique.mygoalskotlin.UI.Splash.View.SplashActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            android:theme="@style/Theme.MyGoalsKotlinNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,12 +19,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="br.hthenrique.mygoalskotlin.UI.Register.View.RegisterActivity"
-            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
+            android:name="br.hthenrique.mygoalskotlin.UI.Register.View.RegisterActivity" />
         <activity
             android:name="br.hthenrique.mygoalskotlin.UI.Login.View.LoginActivity"
             android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
         <activity android:name="br.hthenrique.mygoalskotlin.UI.Main.View.MainActivity" />
+        <activity android:name="br.hthenrique.mygoalskotlin.UI.Profile.View.ProfileActivity" />
     </application>
 
 </manifest>

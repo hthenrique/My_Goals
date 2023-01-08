@@ -225,6 +225,10 @@ attr chipSurfaceColor
 attr circleCrop
 attr circleRadius
 attr circularProgressIndicatorStyle
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr clickAction
 attr clockFaceBackgroundColor
 attr clockHandColor
@@ -1760,6 +1764,8 @@ drawable ic_baseline_add_24
 drawable ic_baseline_close_24
 drawable ic_baseline_done_24
 drawable ic_baseline_edit_24
+drawable ic_baseline_email_24
+drawable ic_baseline_keyboard_arrow_left_24
 drawable ic_baseline_lock_24
 drawable ic_baseline_person_24
 drawable ic_baseline_remove_24
@@ -1868,6 +1874,7 @@ id action_context_bar
 id action_divider
 id action_image
 id action_menu_divider
+id action_menu_done
 id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
@@ -1934,6 +1941,7 @@ id confirm_button
 id constraintLayout
 id constraintLayout2
 id constraintLayout3
+id constraintLayout5
 id container
 id content
 id contentPanel
@@ -1980,8 +1988,11 @@ id easeOut
 id editDoneButton
 id editPositionButton
 id editPositionNameLayout
+id editProfileImageButton
 id editTextConfirmPassword
 id editTextEmail
+id editTextEmailProfile
+id editTextNameUser
 id editTextPassword
 id editTextPosition
 id editTextRegisterEmail
@@ -2054,6 +2065,7 @@ id linearLayout2
 id linearLayout3
 id linearLayout4
 id linearLayout5
+id linearLayout6
 id listMode
 id list_item
 id loadingLayout
@@ -2142,7 +2154,7 @@ id percent
 id pin
 id position
 id postLayout
-id profile
+id profileImageView
 id progressBar2
 id progress_circular
 id progress_horizontal
@@ -2245,7 +2257,6 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
-id textView2
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -2279,6 +2290,7 @@ id unlabeled
 id up
 id useLogo
 id userPositionValue
+id userProfile
 id view_offset_helper
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
@@ -2461,6 +2473,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu options_menu
+menu register_done
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -3382,6 +3395,7 @@ styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCo
 styleable CheckBoxPreference android_summaryOn android_summaryOff android_disableDependentsState disableDependentsState summaryOff summaryOn
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
 styleable ClockHandView clockHandColor materialCircleRadius selectorSize

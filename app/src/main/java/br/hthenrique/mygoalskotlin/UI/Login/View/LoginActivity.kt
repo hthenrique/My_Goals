@@ -24,9 +24,6 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
 
-    private var mockEmail = "henrique@gmail.com"
-    private var mockpassword = "Henrique#3"
-
     private val loginModel: LoginModel by lazy { LoginModel() }
     private val validator: Validator by lazy { Validator() }
     private var loginViewModel: LoginViewModel? = null
@@ -40,9 +37,6 @@ class LoginActivity : AppCompatActivity() {
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        binding.editTextEmail.setText(mockEmail)
-        binding.editTextPassword.setText(mockpassword)
 
         setupButtonClicked()
     }

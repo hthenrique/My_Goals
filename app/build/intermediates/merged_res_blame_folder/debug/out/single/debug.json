@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_email_24.xml.flat",
-        "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\drawable\\ic_baseline_email_24.xml"
-    },
-    {
         "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_email_24.xml.flat",
+        "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\drawable\\ic_baseline_email_24.xml"
     },
     {
         "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
@@ -56,12 +56,12 @@
         "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\drawable\\ic_baseline_lock_24.xml"
     },
     {
-        "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\drawable_edittext_background.xml.flat",
-        "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\drawable\\edittext_background.xml"
-    },
-    {
         "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_person_24.xml.flat",
         "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\drawable\\ic_baseline_person_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\drawable_edittext_background.xml.flat",
+        "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\drawable\\edittext_background.xml"
     },
     {
         "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_remove_24.xml.flat",
@@ -72,12 +72,12 @@
         "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\drawable\\ic_baseline_edit_24.xml"
     },
     {
-        "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\layout\\activity_login.xml"
-    },
-    {
         "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\menu_register_done.xml.flat",
         "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\menu\\register_done.xml"
+    },
+    {
+        "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",

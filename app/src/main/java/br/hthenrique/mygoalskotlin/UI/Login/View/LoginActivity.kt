@@ -67,6 +67,17 @@ class LoginActivity : AppCompatActivity() {
             registerUser()
         }
 
+        binding.textViewForgotPass.setOnClickListener {
+            if (binding.editTextEmail.text.toString().trim() == ""){
+                binding.editTextEmail.error = "Put a valid e-mail"
+            }else{
+                loginViewModel?.resetPassword(binding.editTextEmail.text.toString().trim())
+                loginViewModel?.getErrorLiveData()?.observe(this, Observer {
+                    Toast.makeText(this, it.toString(), Toast.LENGTH_LONG).show()
+                })
+                Toast.makeText(this, "Verify your email", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
     private fun firebaseRequest(){

@@ -42,6 +42,10 @@ class LoginViewModel(val application: Application) : ViewModel() {
         }
     }
 
+    fun resetPassword(email: String){
+        repositoryFirebase?.resetPasswordFirebase(email)
+    }
+
     fun getLoginMutableLiveData(): MutableLiveData<FirebaseUser>?{
         return loginUserLiveData
     }

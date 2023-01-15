@@ -1,6 +1,7 @@
 package br.hthenrique.mygoalskotlin.Model.repository
 
 import android.app.Application
+import android.content.ContentValues.TAG
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import br.hthenrique.mygoalskotlin.Model.LoginModel
@@ -8,6 +9,7 @@ import br.hthenrique.mygoalskotlin.Model.RegisterModel
 import br.hthenrique.mygoalskotlin.Model.User
 import br.hthenrique.mygoalskotlin.Utils.CollectionsConstants.USERS
 import com.google.android.gms.tasks.Task
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -16,10 +18,12 @@ import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.ktx.app
 
 class RepositoryFirebase() {
     private var application: Application? = null
     private var firebaseAuth: FirebaseAuth? = null
+    private var firebaseFirestore: FirebaseFirestore? = null
     private var userMutableLiveData: MutableLiveData<FirebaseUser>? = null
     private var userDetailsLiveData: MutableLiveData<User>? = null
     private var errorMutableLiveData: MutableLiveData<String>? = null
@@ -28,11 +32,13 @@ class RepositoryFirebase() {
 
     init {
         getCurrentUser()
+        firebaseFirestore = FirebaseFirestore.getInstance()
         firebaseAuth = FirebaseAuth.getInstance()
         userMutableLiveData = MutableLiveData()
         userDetailsLiveData = MutableLiveData()
         errorMutableLiveData = MutableLiveData()
     }
+
 
     fun registerNewUser(registerModel: RegisterModel){
         firebaseAuth?.createUserWithEmailAndPassword(
@@ -99,6 +105,15 @@ class RepositoryFirebase() {
             }
         }
         return user
+    }
+
+    fun resetPasswordFirebase(email: String){
+        Firebase.auth.sendPasswordResetEmail(email)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.d(TAG, "Email sent.")
+                }
+            }
     }
 
     fun updateUserFirebase(){

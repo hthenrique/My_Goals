@@ -47,17 +47,20 @@ class ProfileActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
-                onBackPressed()
-                this.finish()
+                backToMain()
             }
             R.id.action_menu_done ->{
                 saveUser()
-                val mainIntent = Intent(this, MainActivity::class.java)
-                startActivity(mainIntent)
-                this.finish()
+                backToMain()
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun backToMain(){
+        val mainIntent = Intent(this, MainActivity::class.java)
+        startActivity(mainIntent)
+        this.finish()
     }
 
     private fun loadUser(){

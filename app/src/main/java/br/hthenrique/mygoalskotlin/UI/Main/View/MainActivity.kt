@@ -17,6 +17,7 @@ import br.hthenrique.mygoalskotlin.R
 import br.hthenrique.mygoalskotlin.UI.Login.View.LoginActivity
 import br.hthenrique.mygoalskotlin.UI.Main.ViewModel.MainViewModel
 import br.hthenrique.mygoalskotlin.UI.Profile.View.ProfileActivity
+import br.hthenrique.mygoalskotlin.UI.Settings.View.SettingsActivity
 import br.hthenrique.mygoalskotlin.UI.ViewModelFactory.ViewModelFactory
 import br.hthenrique.mygoalskotlin.databinding.ActivityMainBinding
 import com.google.firebase.auth.ktx.auth
@@ -108,6 +109,10 @@ class MainActivity : AppCompatActivity() {
                 val profileIntent = Intent(this, ProfileActivity::class.java)
                 startActivity(profileIntent)
                 this.finish()
+            }
+            R.id.settings -> {
+                val settingsIntent = Intent(this, SettingsActivity::class.java)
+                startActivity(settingsIntent)
             }
         }
         return super.onOptionsItemSelected(item)

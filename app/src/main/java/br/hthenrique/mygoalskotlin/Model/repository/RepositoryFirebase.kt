@@ -116,15 +116,15 @@ class RepositoryFirebase() {
             }
     }
 
-    fun updateUserFirebase(){
-        val user = Firebase.auth.currentUser
+    fun deleteAccountFirebase(){
+        val user = Firebase.auth.currentUser!!
 
-        /*user!!.updateProfile()
-            .addOnCompleteListener {
-                if (it.isSuccessful){
-                    Log.i("Firebase current", "User has been updated")
+        user.delete()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.i(TAG, "User account deleted.")
                 }
-            }*/
+            }
     }
 
     fun getCurrentUser(): FirebaseUser? {

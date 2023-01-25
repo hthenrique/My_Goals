@@ -39,6 +39,7 @@
             android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
         <activity android:name="br.hthenrique.mygoalskotlin.UI.Main.View.MainActivity" />
         <activity android:name="br.hthenrique.mygoalskotlin.UI.Profile.View.ProfileActivity" />
+        <activity android:name="br.hthenrique.mygoalskotlin.UI.Settings.View.SettingsActivity" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"

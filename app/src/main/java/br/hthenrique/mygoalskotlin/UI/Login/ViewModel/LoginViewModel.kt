@@ -8,7 +8,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.hthenrique.mygoalskotlin.Model.LoginModel
 import br.hthenrique.mygoalskotlin.Model.repository.RepositoryFirebase
-import br.hthenrique.mygoalskotlin.Utils.Resource
 import com.google.firebase.auth.FirebaseUser
 
 
@@ -26,17 +25,18 @@ class LoginViewModel(val application: Application) : ViewModel() {
     fun login(loginModel: LoginModel){
         val loginUser = repositoryFirebase?.loginExistentUser(loginModel)
         loginUser?.addOnSuccessListener {
-            saveUserInSharedPrefs(it.user?.uid)
+            saveUserInSharedPrefs(it.user?.uid, loginModel)
         }
     }
 
     @SuppressLint("CommitPrefEdits")
-    private fun saveUserInSharedPrefs(uid: String?) {
+    private fun saveUserInSharedPrefs(uid: String?, loginModel: LoginModel) {
         val sharedPreferences: SharedPreferences = application.getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
         val prefsEditor: SharedPreferences.Editor = sharedPreferences.edit()
         prefsEditor.apply {
             putBoolean("isUserLogin", true)
             putString("uid", uid)
+            putString("password", loginModel.password)
             apply()
             commit()
         }

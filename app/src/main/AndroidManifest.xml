@@ -14,17 +14,15 @@
             android:theme="@style/Theme.MyGoalsKotlinNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="br.hthenrique.mygoalskotlin.UI.Register.View.RegisterActivity" />
-        <activity
-            android:name="br.hthenrique.mygoalskotlin.UI.Login.View.LoginActivity"
+        <activity android:name="br.hthenrique.mygoalskotlin.UI.Register.View.RegisterActivity" />
+        <activity android:name="br.hthenrique.mygoalskotlin.UI.Login.View.LoginActivity"
             android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
         <activity android:name="br.hthenrique.mygoalskotlin.UI.Main.View.MainActivity" />
         <activity android:name="br.hthenrique.mygoalskotlin.UI.Profile.View.ProfileActivity" />
+        <activity android:name="br.hthenrique.mygoalskotlin.UI.Settings.View.SettingsActivity" />
     </application>
 
 </manifest>

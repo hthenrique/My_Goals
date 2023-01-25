@@ -8,8 +8,16 @@
         "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\drawable\\ic_baseline_email_24.xml"
     },
     {
+        "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\layout_delete_account_dialog.xml.flat",
+        "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\layout\\delete_account_dialog.xml"
+    },
+    {
         "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\src\\main\\res\\layout\\activity_settings.xml"
     },
     {
         "merged": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_profile.xml.flat",

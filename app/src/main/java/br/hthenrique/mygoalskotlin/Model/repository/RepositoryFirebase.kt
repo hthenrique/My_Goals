@@ -9,8 +9,8 @@ import br.hthenrique.mygoalskotlin.Model.RegisterModel
 import br.hthenrique.mygoalskotlin.Model.User
 import br.hthenrique.mygoalskotlin.Utils.CollectionsConstants.USERS
 import com.google.android.gms.tasks.Task
-import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -18,7 +18,6 @@ import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.ktx.app
 
 class RepositoryFirebase() {
     private var application: Application? = null
@@ -116,7 +115,9 @@ class RepositoryFirebase() {
             }
     }
 
-    fun deleteAccountFirebase(){
+    fun deleteAccountFirebase(loginModel: LoginModel?) {
+        reAuthenticateUser(loginModel)
+
         val user = Firebase.auth.currentUser!!
 
         user.delete()
@@ -125,6 +126,16 @@ class RepositoryFirebase() {
                     Log.i(TAG, "User account deleted.")
                 }
             }
+     }
+
+    private fun reAuthenticateUser(loginModel: LoginModel?) {
+        val user = Firebase.auth.currentUser!!
+
+        val credential = EmailAuthProvider
+            .getCredential(loginModel?.email.toString(), loginModel?.password.toString())
+
+        user.reauthenticate(credential)
+            .addOnCompleteListener { Log.d(TAG, "User re-authenticated.") }
     }
 
     fun getCurrentUser(): FirebaseUser? {

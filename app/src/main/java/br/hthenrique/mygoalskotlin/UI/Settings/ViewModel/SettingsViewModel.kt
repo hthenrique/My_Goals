@@ -6,7 +6,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import br.hthenrique.mygoalskotlin.Model.LoginModel
 import br.hthenrique.mygoalskotlin.Model.User
 import br.hthenrique.mygoalskotlin.Model.database.UserDatabase
 import br.hthenrique.mygoalskotlin.Model.repository.RepositoryFirebase
@@ -24,6 +24,7 @@ class SettingsViewModel(val application: Application): ViewModel() {
     private var errorMutableLiveData: MutableLiveData<String>? = null
     private var currentUid: String? = null
     private var currentUser: FirebaseUser? = null
+    private var loginModel: LoginModel? = null
 
     private var userDetailsLiveData: MutableLiveData<User>? = null
 
@@ -35,25 +36,28 @@ class SettingsViewModel(val application: Application): ViewModel() {
         this.currentUser = getCurrentUser()
         this.currentUid = recoverUid()
 
+        getUserDetailsLiveData()
+
         val dao = UserDatabase.getDatabase(application).getUserDao()
         repositoryLocal = RepositoryLocalDatabase(dao)
+
+        this.loginModel = recoverCredentials()
     }
 
-    fun deleteAccount(password: String?) {
-        var currentUserDatabase: Array<User>? = null
+    fun deleteAccount(password: String?):String? {
+        var userDeleted: String? = null
+        var currentUser = userDetailsLiveData?.value
 
-        CoroutineScope(Dispatchers.IO).launch {
-            currentUserDatabase = repositoryLocal?.getUserDatabase(currentUser?.uid)
-        }
-
-        if (currentUserDatabase!= null){
-            val user: User = currentUserDatabase!![0]
+        if (currentUser!= null){
+            val user: User = currentUser
             if (validateUser(password)){
-                repositoryFirebase?.deleteAccountFirebase()
                 deleteIntoDatabase(user)
+                repositoryFirebase?.deleteAccountFirebase(loginModel)
+                userDeleted = "User Deleted"
+                deleteUserFromSharedPrefs()
             }
         }
-
+        return userDeleted
     }
 
     private fun getCurrentUser(): FirebaseUser? {
@@ -72,7 +76,7 @@ class SettingsViewModel(val application: Application): ViewModel() {
     }
 
     private fun validateUser(password: String?): Boolean {
-        val recPassword = recoverPassword()
+        val recPassword = loginModel?.password
         if (password.equals(recPassword)){
             return true
         }
@@ -80,18 +84,28 @@ class SettingsViewModel(val application: Application): ViewModel() {
     }
 
     @SuppressLint("CommitPrefEdits")
-    private fun recoverPassword(): String? {
-        val password: String? = null
+    private fun recoverCredentials(): LoginModel? {
+        var userLogin: LoginModel? = LoginModel()
         val sharedPreferences: SharedPreferences = application.getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
-        sharedPreferences.apply {
-            getString("password", password)
+
+        userLogin?.apply {
+            email = sharedPreferences.all["email"].toString()
+            password = sharedPreferences.all["password"].toString()
         }
-        return password
+        return userLogin
+    }
+
+    fun deleteUserFromSharedPrefs() {
+        val sharedPreferences: SharedPreferences = application.getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
+        val prefsEditor: SharedPreferences.Editor = sharedPreferences.edit()
+        prefsEditor.remove("isUserLogin")
+        prefsEditor.apply()
+        prefsEditor.commit()
     }
 
     @SuppressLint("CommitPrefEdits")
     private fun recoverUid(): String? {
-        val uid: String? = null
+        val uid: String? = String()
         val sharedPreferences: SharedPreferences = application.getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
         sharedPreferences.apply {
             getString("uid", uid)

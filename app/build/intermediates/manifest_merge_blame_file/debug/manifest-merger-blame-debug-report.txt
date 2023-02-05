@@ -6,9 +6,9 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
+8-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml
+9-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\135635635f265bb54ad8717d5622c78f\transformed\firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
@@ -27,58 +27,58 @@
 15-->[com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\45457fd8fcc3def8bd47933b7de39176\transformed\play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:22-76
 16
 17    <application
-17-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:5:5-26:19
+17-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:5:5-26:19
 18        android:allowBackup="true"
-18-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:6:9-35
+18-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 19-->[androidx.core:core:1.5.0] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\5c09487819e9d2cf042a8b166be44264\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 20        android:debuggable="true"
 21        android:icon="@mipmap/ic_launcher"
-21-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:7:9-43
+21-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:7:9-43
 22        android:label="@string/app_name"
-22-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:8:9-41
+22-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:8:9-41
 23        android:roundIcon="@mipmap/ic_launcher_round"
-23-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:9:9-54
+23-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:9:9-54
 24        android:supportsRtl="true"
-24-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:10:9-35
+24-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:10:9-35
 25        android:testOnly="true"
 26        android:theme="@style/Theme.MyGoalsKotlin" >
-26-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:11:9-51
+26-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:11:9-51
 27        <activity
-27-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:12:9-19:20
+27-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:12:9-19:20
 28            android:name="br.hthenrique.mygoalskotlin.UI.Splash.View.SplashActivity"
-28-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:13:13-85
+28-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:13:13-85
 29            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" >
-29-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:14:13-66
+29-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:14:13-66
 30            <intent-filter>
-30-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:15:13-18:29
+30-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:15:13-18:29
 31                <action android:name="android.intent.action.MAIN" />
-31-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:16:17-69
-31-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:16:25-66
+31-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:16:17-69
+31-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:16:25-66
 32
 33                <category android:name="android.intent.category.LAUNCHER" />
-33-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:17:17-77
-33-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:17:27-74
+33-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:17:17-77
+33-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:17:27-74
 34            </intent-filter>
 35        </activity>
 36        <activity android:name="br.hthenrique.mygoalskotlin.UI.Register.View.RegisterActivity" />
-36-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:20:9-98
-36-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:20:19-95
+36-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:20:9-98
+36-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:20:19-95
 37        <activity
-37-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:21:9-22:69
+37-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:21:9-22:69
 38            android:name="br.hthenrique.mygoalskotlin.UI.Login.View.LoginActivity"
-38-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:21:19-89
+38-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:21:19-89
 39            android:theme="@style/Theme.MyGoalsKotlinNoActionBar" />
-39-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:22:13-66
+39-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:22:13-66
 40        <activity android:name="br.hthenrique.mygoalskotlin.UI.Main.View.MainActivity" />
-40-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:23:9-90
-40-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:23:19-87
+40-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:23:9-90
+40-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:23:19-87
 41        <activity android:name="br.hthenrique.mygoalskotlin.UI.Profile.View.ProfileActivity" />
-41-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:24:9-96
-41-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:24:19-93
+41-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:24:9-96
+41-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:24:19-93
 42        <activity android:name="br.hthenrique.mygoalskotlin.UI.Settings.View.SettingsActivity" />
-42-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:25:9-98
-42-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my-goals\app\src\main\AndroidManifest.xml:25:19-95
+42-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:25:9-98
+42-->C:\Users\h.da.silva.teixeira\Documents\Android Projetos\my_goals\app\src\main\AndroidManifest.xml:25:19-95
 43
 44        <service
 44-->[com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\h.da.silva.teixeira\.gradle\caches\transforms-3\448fe43da53bf830337d04ac82a97f66\transformed\firebase-firestore-ktx-24.1.2\AndroidManifest.xml:12:9-18:19

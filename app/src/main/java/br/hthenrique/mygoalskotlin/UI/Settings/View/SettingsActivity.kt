@@ -1,6 +1,9 @@
 package br.hthenrique.mygoalskotlin.UI.Settings.View
 
 import android.app.AlertDialog
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
 import android.view.MenuItem
@@ -10,6 +13,7 @@ import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import br.hthenrique.mygoalskotlin.R
+import br.hthenrique.mygoalskotlin.UI.Login.View.LoginActivity
 import br.hthenrique.mygoalskotlin.UI.Settings.ViewModel.SettingsViewModel
 import br.hthenrique.mygoalskotlin.UI.ViewModelFactory.ViewModelFactory
 import br.hthenrique.mygoalskotlin.databinding.ActivitySettingsBinding
@@ -98,7 +102,13 @@ class SettingsActivity : AppCompatActivity() {
             .setView(inputPassword)
             .setPositiveButton("Confirm") { dialog, id ->
                 val password = inputPassword.text.toString()
-                settingsViewModel.deleteAccount(password)
+                val deletedUser = settingsViewModel.deleteAccount(password)
+                if(deletedUser.equals("User Deleted")){
+                    val backToLogin = Intent(this, LoginActivity::class.java)
+                    backToLogin.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                    startActivity(backToLogin)
+                    finishAffinity()
+                }
             }
             .setNegativeButton("Cancel") { dialog, id ->
                 dialog.cancel()

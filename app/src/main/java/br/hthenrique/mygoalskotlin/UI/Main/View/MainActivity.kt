@@ -126,7 +126,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun logoutUser() {
         Firebase.auth.signOut()
-        deleteUserFromSharedPrefs()
         mainViewModel.deleteUser(user)
         backToLogin()
     }
@@ -144,13 +143,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun deleteUserFromSharedPrefs() {
-        val sharedPreferences: SharedPreferences = getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
-        val prefsEditor: SharedPreferences.Editor = sharedPreferences.edit()
-        prefsEditor.remove("isUserLogin")
-        prefsEditor.apply()
-        prefsEditor.commit()
-    }
+
 
     private fun backToLogin() {
         val startLogin: Intent = Intent(this, LoginActivity::class.java)

@@ -64,6 +64,7 @@ class MainViewModel(val application: Application): ViewModel() {
 
     fun deleteUser(user: User?){
         deleteIntoDatabase(user)
+        deleteUserFromSharedPrefs()
     }
 
     //Database
@@ -107,6 +108,14 @@ class MainViewModel(val application: Application): ViewModel() {
             getString("uid", uid)
         }
         return uid
+    }
+
+    private fun deleteUserFromSharedPrefs() {
+        val sharedPreferences: SharedPreferences = application.getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
+        val prefsEditor: SharedPreferences.Editor = sharedPreferences.edit()
+        prefsEditor.remove("isUserLogin")
+        prefsEditor.apply()
+        prefsEditor.commit()
     }
 
     @SuppressLint("SimpleDateFormat", "NewApi")

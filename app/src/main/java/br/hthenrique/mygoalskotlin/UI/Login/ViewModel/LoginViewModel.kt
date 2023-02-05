@@ -36,6 +36,7 @@ class LoginViewModel(val application: Application) : ViewModel() {
         prefsEditor.apply {
             putBoolean("isUserLogin", true)
             putString("uid", uid)
+            putString("email", loginModel.email)
             putString("password", loginModel.password)
             apply()
             commit()

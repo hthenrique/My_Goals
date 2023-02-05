@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
+            "outputFile": "C:\\Users\\h.da.silva.teixeira\\Documents\\Android Projetos\\my_goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
             "map": [
                 {
                     "source": "C:\\Users\\h.da.silva.teixeira\\.gradle\\caches\\transforms-3\\6d4b547f79b9da83b007485d7ddf4157\\transformed\\play-services-base-18.0.1\\res\\values-de\\values.xml",

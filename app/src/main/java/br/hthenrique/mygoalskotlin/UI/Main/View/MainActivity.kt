@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -138,6 +139,12 @@ class MainActivity : AppCompatActivity() {
 
         binding.welcomeUser.text = "Welcome! ${user.name}"
         binding.userPositionValue.text = user.position
+        if (user.goals.toString().length > 3){
+            binding.goalsValue.setTextSize(TypedValue.COMPLEX_UNIT_SP, 60F)
+        }
+        if (user.matches.toString().length > 3){
+            binding.goalsValue.setTextSize(TypedValue.COMPLEX_UNIT_SP, 60F)
+        }
         binding.goalsValue.text = user.goals.toString()
         binding.matchesValue.text = user.matches.toString()
 
@@ -161,8 +168,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun showOrHideEditPosition() {
         if (binding.editPositionNameLayout.visibility == View.VISIBLE){
+            binding.userPositionValue.visibility = View.VISIBLE
+            binding.editPositionButton.visibility = View.VISIBLE
             binding.editPositionNameLayout.visibility = View.GONE
         }else{
+            binding.userPositionValue.visibility = View.GONE
+            binding.editPositionButton.visibility = View.GONE
             binding.editPositionNameLayout.visibility = View.VISIBLE
         }
     }
